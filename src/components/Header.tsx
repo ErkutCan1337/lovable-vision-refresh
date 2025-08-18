@@ -10,6 +10,7 @@ const navigation = [
   { name: "Ürün & Hizmetler", href: "/services" },
   { name: "Projeler", href: "/projects" },
   { name: "Kariyer", href: "/careers" },
+  { name: "Referanslar", href: "/references" },
   { name: "İletişim", href: "/contact" },
 ];
 

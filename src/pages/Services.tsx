@@ -2,6 +2,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Shield, Cloud, HardDrive, Network, AlertTriangle } from "lucide-react";
+import dataCenterImage from "@/assets/data-center.jpg";
+import hpcClusterImage from "@/assets/hpc-cluster.jpg";
 
 const services = [
   {
@@ -78,15 +80,48 @@ const Services = () => {
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Header Section */}
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              Ürün & Hizmetlerimiz
-            </h1>
-            <p className="text-lg leading-8 text-muted-foreground">
-              Teknoloji alanında uzman kadromuz ile kapsamlı çözümler sunuyoruz. 
-              Her ihtiyaca özel entegre sistemler geliştiriyoruz.
-            </p>
+          {/* Header Section with Images */}
+          <div className="mb-16">
+            <div className="mx-auto max-w-2xl text-center mb-12">
+              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
+                Ürün & Hizmetlerimiz
+              </h1>
+              <p className="text-lg leading-8 text-muted-foreground">
+                Teknoloji alanında uzman kadromuz ile kapsamlı çözümler sunuyoruz. 
+                Her ihtiyaca özel entegre sistemler geliştiriyoruz.
+              </p>
+            </div>
+            
+            {/* Hero Images Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+              <div className="relative rounded-2xl overflow-hidden group">
+                <img 
+                  src={dataCenterImage} 
+                  alt="Modern veri merkezi altyapısı" 
+                  className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
+                  <div className="p-6 text-white">
+                    <h3 className="text-xl font-semibold mb-2">Veri Merkezi Çözümleri</h3>
+                    <p className="text-sm text-white/90">Modern ve güvenli altyapı sistemleri</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="relative rounded-2xl overflow-hidden group">
+                <img 
+                  src={hpcClusterImage} 
+                  alt="Yüksek performanslı hesaplama sistemleri" 
+                  className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
+                  <div className="p-6 text-white">
+                    <h3 className="text-xl font-semibold mb-2">HPC Çözümleri</h3>
+                    <p className="text-sm text-white/90">Süper bilgisayar teknolojileri</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Services Grid */}
