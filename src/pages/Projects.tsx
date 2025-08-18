@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Monitor, ShoppingCart, Shield, Truck, CreditCard } from "lucide-react";
+import projectDashboard from "@/assets/project-dashboard.jpg";
 
 const projects = [
   {
@@ -61,15 +62,23 @@ const Projects = () => {
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Header Section */}
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              Projelerimiz
-            </h1>
-            <p className="text-lg leading-8 text-muted-foreground">
-              Çeşitli sektörlerde gerçekleştirdiğimiz başarılı projeler ve çözümlerimiz. 
-              Her proje, müşteri ihtiyaçlarına özel geliştirilmiş teknoloji çözümleridir.
-            </p>
+          {/* Hero Image Section */}
+          <div className="relative mb-16 rounded-2xl overflow-hidden">
+            <img 
+              src={projectDashboard} 
+              alt="2C Teknoloji proje yönetimi" 
+              className="w-full h-80 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60 flex items-center justify-center">
+              <div className="text-center">
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-4">
+                  Projelerimiz
+                </h1>
+                <p className="text-lg text-white/90 max-w-2xl">
+                  Çeşitli sektörlerde gerçekleştirdiğimiz başarılı projeler ve çözümlerimiz
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Projects Grid */}
