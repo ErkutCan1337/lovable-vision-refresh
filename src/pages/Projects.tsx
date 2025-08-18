@@ -1,9 +1,13 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Monitor, ShoppingCart, Shield, Truck, CreditCard } from "lucide-react";
 import projectManagementImage from "@/assets/project-management.jpg";
+import projectDashboardImage from "@/assets/project-dashboard.jpg";
+import modernDatacenterImage from "@/assets/modern-datacenter.jpg";
+import networkInfrastructureImage from "@/assets/network-infrastructure.jpg";
 
 const projects = [
   {
@@ -57,29 +61,48 @@ const projects = [
 ];
 
 const Projects = () => {
+  const carouselSlides = [
+    {
+      image: projectManagementImage,
+      title: "Proje Yönetimi",
+      description: "Profesyonel proje yönetimi ile başarılı çözümler"
+    },
+    {
+      image: projectDashboardImage,
+      title: "Analitik Dashboard",
+      description: "Modern veri görselleştirme ve analiz sistemleri"
+    },
+    {
+      image: modernDatacenterImage,
+      title: "Altyapı Projeleri",
+      description: "Kurumsal IT altyapısı ve veri merkezi çözümleri"
+    },
+    {
+      image: networkInfrastructureImage,
+      title: "Ağ Altyapısı",
+      description: "Güvenli ve ölçeklenebilir ağ mimarisi kurulumu"
+    }
+  ];
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Hero Section with Image */}
-          <div className="relative mb-16 rounded-2xl overflow-hidden">
-            <img 
-              src={projectManagementImage} 
-              alt="Proje yönetimi ve teknoloji çözümleri" 
-              className="w-full h-80 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 flex items-center justify-center">
-              <div className="text-center max-w-4xl px-6">
-                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
-                  Projelerimiz
-                </h1>
-                <p className="text-xl text-white/90 leading-relaxed">
-                  Çeşitli sektörlerde gerçekleştirdiğimiz başarılı projeler ve çözümlerimiz. 
-                  Her proje, müşteri ihtiyaçlarına özel geliştirilmiş teknoloji çözümleridir.
-                </p>
-              </div>
-            </div>
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
+              Projelerimiz
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12 slide-up">
+              Çeşitli sektörlerde gerçekleştirdiğimiz başarılı projeler ve çözümlerimiz. 
+              Her proje, müşteri ihtiyaçlarına özel geliştirilmiş teknoloji çözümleridir.
+            </p>
+          </div>
+
+          {/* Projects Carousel */}
+          <div className="mb-16">
+            <ImageCarousel slides={carouselSlides} className="max-w-5xl mx-auto" />
           </div>
 
           {/* Projects Grid */}

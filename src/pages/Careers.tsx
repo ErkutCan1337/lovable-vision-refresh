@@ -1,10 +1,14 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Users, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 import developersWorkingImage from "@/assets/developers-working.jpg";
+import careerGrowthImage from "@/assets/career-growth.jpg";
+import teamCollaborationImage from "@/assets/team-collaboration.jpg";
+import officeBuildingImage from "@/assets/office-building.jpg";
 
 const jobOpenings = [
   {
@@ -75,29 +79,48 @@ const benefits = [
 ];
 
 const Careers = () => {
+  const carouselSlides = [
+    {
+      image: developersWorkingImage,
+      title: "Yazılım Geliştirme",
+      description: "Modern teknolojiler ile yazılım geliştirme fırsatları"
+    },
+    {
+      image: careerGrowthImage,
+      title: "Kariyer Gelişimi",
+      description: "Sürekli öğrenme ve gelişim odaklı çalışma ortamı"
+    },
+    {
+      image: teamCollaborationImage,
+      title: "Takım Çalışması",
+      description: "Uzman ekip ile birlikte çalışma deneyimi"
+    },
+    {
+      image: officeBuildingImage,
+      title: "Modern Ofis",
+      description: "Ankara'da konforlu ve teknolojik çalışma ortamı"
+    }
+  ];
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Hero Section with Image */}
-          <div className="relative mb-16 rounded-2xl overflow-hidden">
-            <img 
-              src={developersWorkingImage} 
-              alt="2C Teknoloji ekibi çalışırken" 
-              className="w-full h-80 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 flex items-center justify-center">
-              <div className="text-center max-w-4xl px-6">
-                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
-                  Kariyer Fırsatları
-                </h1>
-                <p className="text-xl text-white/90 leading-relaxed">
-                  Aramıza katılacak arkadaşlar, Ankara'da bulunan işyerimizde Java teknolojileri kullanarak, 
-                  web tabanlı ve dağıtık mimaride yazılım geliştirme projelerinde çalışma imkanı bulacaklar.
-                </p>
-              </div>
-            </div>
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
+              Kariyer Fırsatları
+            </h1>
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12 slide-up">
+              Aramıza katılacak arkadaşlar, Ankara'da bulunan işyerimizde Java teknolojileri kullanarak, 
+              web tabanlı ve dağıtık mimaride yazılım geliştirme projelerinde çalışma imkanı bulacaklar.
+            </p>
+          </div>
+
+          {/* Careers Carousel */}
+          <div className="mb-16">
+            <ImageCarousel slides={carouselSlides} className="max-w-5xl mx-auto" />
           </div>
 
           {/* Benefits Section */}

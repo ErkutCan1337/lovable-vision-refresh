@@ -1,9 +1,12 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ImageCarousel } from "@/components/ImageCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Shield, Cloud, HardDrive, Network, AlertTriangle } from "lucide-react";
 import modernDatacenterImage from "@/assets/modern-datacenter.jpg";
 import supercomputerImage from "@/assets/supercomputer.jpg";
+import networkInfrastructureImage from "@/assets/network-infrastructure.jpg";
+import softwareDevelopmentImage from "@/assets/software-development.jpg";
 
 const services = [
   {
@@ -75,53 +78,48 @@ const services = [
 ];
 
 const Services = () => {
+  const carouselSlides = [
+    {
+      image: modernDatacenterImage,
+      title: "Modern Veri Merkezi",
+      description: "Güvenli ve ölçeklenebilir veri merkezi altyapı çözümleri"
+    },
+    {
+      image: supercomputerImage,
+      title: "HPC Çözümleri",
+      description: "Yüksek performanslı hesaplama ve süper bilgisayar teknolojileri"
+    },
+    {
+      image: networkInfrastructureImage,
+      title: "Ağ Altyapısı",
+      description: "Profesyonel ağ kurulumu ve yönetim hizmetleri"
+    },
+    {
+      image: softwareDevelopmentImage,
+      title: "Yazılım Geliştirme",
+      description: "Özel yazılım çözümleri ve sistem entegrasyonu"
+    }
+  ];
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Header Section with Images */}
+          {/* Header Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6 fade-in">
+              Ürün & Hizmetlerimiz
+            </h1>
+            <p className="text-lg leading-8 text-muted-foreground max-w-3xl mx-auto mb-12 slide-up">
+              Teknoloji alanında uzman kadromuz ile kapsamlı çözümler sunuyoruz. 
+              Her ihtiyaca özel entegre sistemler geliştiriyoruz.
+            </p>
+          </div>
+
+          {/* Services Carousel */}
           <div className="mb-16">
-            <div className="mx-auto max-w-2xl text-center mb-12">
-              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-                Ürün & Hizmetlerimiz
-              </h1>
-              <p className="text-lg leading-8 text-muted-foreground">
-                Teknoloji alanında uzman kadromuz ile kapsamlı çözümler sunuyoruz. 
-                Her ihtiyaca özel entegre sistemler geliştiriyoruz.
-              </p>
-            </div>
-            
-            {/* Hero Images Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-              <div className="relative rounded-2xl overflow-hidden group">
-                <img 
-                  src={modernDatacenterImage} 
-                  alt="Modern veri merkezi altyapısı" 
-                  className="w-full h-80 object-cover transition-transform group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex items-end">
-                  <div className="p-8 text-white">
-                    <h3 className="text-2xl font-bold mb-3">Veri Merkezi Çözümleri</h3>
-                    <p className="text-white/90">Modern ve güvenli altyapı sistemleri ile kurumsal veri yönetimi</p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="relative rounded-2xl overflow-hidden group">
-                <img 
-                  src={supercomputerImage} 
-                  alt="Yüksek performanslı hesaplama sistemleri" 
-                  className="w-full h-80 object-cover transition-transform group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex items-end">
-                  <div className="p-8 text-white">
-                    <h3 className="text-2xl font-bold mb-3">HPC Çözümleri</h3>
-                    <p className="text-white/90">Süper bilgisayar teknolojileri ve yüksek performanslı hesaplama</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ImageCarousel slides={carouselSlides} className="max-w-5xl mx-auto" />
           </div>
 
           {/* Services Grid */}
