@@ -2,8 +2,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Server, Shield, Cloud, HardDrive, Network, AlertTriangle } from "lucide-react";
-import dataCenterImage from "@/assets/data-center.jpg";
-import hpcClusterImage from "@/assets/hpc-cluster.jpg";
+import modernDatacenterImage from "@/assets/modern-datacenter.jpg";
+import supercomputerImage from "@/assets/supercomputer.jpg";
 
 const services = [
   {
@@ -96,28 +96,28 @@ const Services = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
               <div className="relative rounded-2xl overflow-hidden group">
                 <img 
-                  src={dataCenterImage} 
+                  src={modernDatacenterImage} 
                   alt="Modern veri merkezi altyapısı" 
-                  className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                  className="w-full h-80 object-cover transition-transform group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
-                  <div className="p-6 text-white">
-                    <h3 className="text-xl font-semibold mb-2">Veri Merkezi Çözümleri</h3>
-                    <p className="text-sm text-white/90">Modern ve güvenli altyapı sistemleri</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex items-end">
+                  <div className="p-8 text-white">
+                    <h3 className="text-2xl font-bold mb-3">Veri Merkezi Çözümleri</h3>
+                    <p className="text-white/90">Modern ve güvenli altyapı sistemleri ile kurumsal veri yönetimi</p>
                   </div>
                 </div>
               </div>
               
               <div className="relative rounded-2xl overflow-hidden group">
                 <img 
-                  src={hpcClusterImage} 
+                  src={supercomputerImage} 
                   alt="Yüksek performanslı hesaplama sistemleri" 
-                  className="w-full h-64 object-cover transition-transform group-hover:scale-105"
+                  className="w-full h-80 object-cover transition-transform group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end">
-                  <div className="p-6 text-white">
-                    <h3 className="text-xl font-semibold mb-2">HPC Çözümleri</h3>
-                    <p className="text-sm text-white/90">Süper bilgisayar teknolojileri</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex items-end">
+                  <div className="p-8 text-white">
+                    <h3 className="text-2xl font-bold mb-3">HPC Çözümleri</h3>
+                    <p className="text-white/90">Süper bilgisayar teknolojileri ve yüksek performanslı hesaplama</p>
                   </div>
                 </div>
               </div>
@@ -141,7 +141,7 @@ const Services = () => {
                         <CardTitle className="text-xl font-semibold text-foreground mb-2">
                           {service.title}
                         </CardTitle>
-                        <CardDescription className="text-muted-foreground">
+                        <CardDescription className="text-muted-foreground text-base">
                           {service.description}
                         </CardDescription>
                       </div>
@@ -150,7 +150,7 @@ const Services = () => {
                   <CardContent>
                     <ul className="space-y-3">
                       {service.details.map((detail, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-muted-foreground">
+                        <li key={idx} className="flex items-center text-foreground">
                           <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                           {detail}
                         </li>

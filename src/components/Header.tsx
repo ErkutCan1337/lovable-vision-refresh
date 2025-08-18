@@ -25,10 +25,12 @@ export function Header() {
         <div className="flex lg:flex-1">
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">2C Teknoloji</span>
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">2C</span>
-              </div>
+            <div className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/bd2f2332-ad41-4c85-828f-28da412f9907.png" 
+                alt="2C Teknoloji Logo" 
+                className="w-12 h-12 object-contain"
+              />
               <span className="text-xl font-bold text-foreground">Teknoloji</span>
             </div>
           </Link>
@@ -83,10 +85,12 @@ export function Header() {
             <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm">
               <div className="flex items-center justify-between">
                 <Link to="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
-                  <div className="flex items-center space-x-2">
-                    <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                      <span className="text-primary-foreground font-bold text-sm">2C</span>
-                    </div>
+                  <div className="flex items-center space-x-3">
+                    <img 
+                      src="/lovable-uploads/bd2f2332-ad41-4c85-828f-28da412f9907.png" 
+                      alt="2C Teknoloji Logo" 
+                      className="w-10 h-10 object-contain"
+                    />
                     <span className="text-lg font-bold text-foreground">Teknoloji</span>
                   </div>
                 </Link>

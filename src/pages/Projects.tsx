@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Monitor, ShoppingCart, Shield, Truck, CreditCard } from "lucide-react";
+import projectManagementImage from "@/assets/project-management.jpg";
 
 const projects = [
   {
@@ -61,15 +62,24 @@ const Projects = () => {
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Header Section */}
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              Projelerimiz
-            </h1>
-            <p className="text-lg leading-8 text-muted-foreground">
-              Çeşitli sektörlerde gerçekleştirdiğimiz başarılı projeler ve çözümlerimiz. 
-              Her proje, müşteri ihtiyaçlarına özel geliştirilmiş teknoloji çözümleridir.
-            </p>
+          {/* Hero Section with Image */}
+          <div className="relative mb-16 rounded-2xl overflow-hidden">
+            <img 
+              src={projectManagementImage} 
+              alt="Proje yönetimi ve teknoloji çözümleri" 
+              className="w-full h-80 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70 flex items-center justify-center">
+              <div className="text-center max-w-4xl px-6">
+                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+                  Projelerimiz
+                </h1>
+                <p className="text-xl text-white/90 leading-relaxed">
+                  Çeşitli sektörlerde gerçekleştirdiğimiz başarılı projeler ve çözümlerimiz. 
+                  Her proje, müşteri ihtiyaçlarına özel geliştirilmiş teknoloji çözümleridir.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Projects Grid */}
@@ -99,7 +109,7 @@ const Projects = () => {
                         </Badge>
                       </div>
                     </div>
-                    <CardDescription className="text-muted-foreground">
+                    <CardDescription className="text-muted-foreground text-base leading-relaxed">
                       {project.description}
                     </CardDescription>
                   </CardHeader>
@@ -107,7 +117,7 @@ const Projects = () => {
                     <div className="space-y-4">
                       <div>
                         <h4 className="text-sm font-medium text-foreground mb-2">Kategori</h4>
-                        <p className="text-sm text-muted-foreground">{project.category}</p>
+                        <p className="text-foreground">{project.category}</p>
                       </div>
                       
                       <div>

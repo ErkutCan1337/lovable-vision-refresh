@@ -15,28 +15,28 @@ export function HeroSection() {
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           {/* Main Heading */}
-          <h1 className="text-4xl font-bold tracking-tight text-primary-foreground sm:text-6xl lg:text-7xl fade-in">
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl fade-in">
             Teknoloji ile
-            <span className="block text-primary-glow">
+            <span className="block text-white/90">
               Geleceği Şekillendiriyoruz
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="mt-6 text-lg leading-8 text-primary-foreground/90 max-w-2xl mx-auto slide-up">
+          <p className="mt-6 text-lg leading-8 text-white/80 max-w-2xl mx-auto slide-up">
             2C olarak müşterilerimize ihtiyacı doğrultusunda değer oluşturmayı ve 
             entegre çözümler sunarak platform bağımsız bir şekilde çalışmalarına devam etmekteyiz.
           </p>
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 slide-up">
-            <Button variant="secondary" size="lg" className="glow-on-hover" asChild>
+            <Button variant="secondary" size="lg" className="glow-on-hover bg-white text-primary hover:bg-white/90" asChild>
               <Link to="/services" className="flex items-center gap-2">
                 Hizmetlerimizi Keşfedin
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
-            <Button variant="outline" size="lg" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
+            <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10" asChild>
               <Link to="/about">
                 Hakkımızda
               </Link>
@@ -46,32 +46,32 @@ export function HeroSection() {
           {/* Feature Icons */}
           <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto slide-up">
             <div className="flex flex-col items-center space-y-3">
-              <div className="w-16 h-16 bg-primary-foreground/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                <Shield className="h-8 w-8 text-primary-foreground" />
+              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <Shield className="h-8 w-8 text-white" />
               </div>
               <div className="text-center">
-                <h3 className="text-primary-foreground font-semibold">Güvenlik</h3>
-                <p className="text-primary-foreground/70 text-sm mt-1">Bilişim güvenliği çözümleri</p>
+                <h3 className="text-white font-semibold">Güvenlik</h3>
+                <p className="text-white/80 text-sm mt-1">Bilişim güvenliği çözümleri</p>
               </div>
             </div>
             
             <div className="flex flex-col items-center space-y-3">
-              <div className="w-16 h-16 bg-primary-foreground/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                <Cpu className="h-8 w-8 text-primary-foreground" />
+              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <Cpu className="h-8 w-8 text-white" />
               </div>
               <div className="text-center">
-                <h3 className="text-primary-foreground font-semibold">Yüksek Performans</h3>
-                <p className="text-primary-foreground/70 text-sm mt-1">Süper bilgisayar çözümleri</p>
+                <h3 className="text-white font-semibold">Yüksek Performans</h3>
+                <p className="text-white/80 text-sm mt-1">Süper bilgisayar çözümleri</p>
               </div>
             </div>
             
             <div className="flex flex-col items-center space-y-3">
-              <div className="w-16 h-16 bg-primary-foreground/10 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                <Database className="h-8 w-8 text-primary-foreground" />
+              <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                <Database className="h-8 w-8 text-white" />
               </div>
               <div className="text-center">
-                <h3 className="text-primary-foreground font-semibold">Veri Merkezi</h3>
-                <p className="text-primary-foreground/70 text-sm mt-1">Altyapı çözümleri</p>
+                <h3 className="text-white font-semibold">Veri Merkezi</h3>
+                <p className="text-white/80 text-sm mt-1">Altyapı çözümleri</p>
               </div>
             </div>
           </div>
