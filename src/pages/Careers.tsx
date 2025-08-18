@@ -4,7 +4,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Users, Code } from "lucide-react";
 import { Link } from "react-router-dom";
-import careerGrowth from "@/assets/career-growth.jpg";
 
 const jobOpenings = [
   {
@@ -80,23 +79,15 @@ const Careers = () => {
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Hero Image Section */}
-          <div className="relative mb-16 rounded-2xl overflow-hidden">
-            <img 
-              src={careerGrowth} 
-              alt="2C Teknoloji kariyer fırsatları" 
-              className="w-full h-80 object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/60 flex items-center justify-center">
-              <div className="text-center">
-                <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-4">
-                  Kariyer Fırsatları
-                </h1>
-                <p className="text-lg text-white/90 max-w-3xl px-6">
-                  Ankara'da bulunan işyerimizde Java teknolojileri kullanarak, web tabanlı ve dağıtık mimaride yazılım geliştirme projelerinde çalışma imkanı
-                </p>
-              </div>
-            </div>
+          {/* Header Section */}
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
+              Kariyer Fırsatları
+            </h1>
+            <p className="text-lg leading-8 text-muted-foreground">
+              Aramıza katılacak arkadaşlar, Ankara'da bulunan işyerimizde Java teknolojileri kullanarak, 
+              web tabanlı ve dağıtık mimaride yazılım geliştirme projelerinde çalışma imkanı bulacaklar.
+            </p>
           </div>
 
           {/* Benefits Section */}
