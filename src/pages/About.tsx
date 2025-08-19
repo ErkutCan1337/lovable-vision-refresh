@@ -69,8 +69,12 @@ const About = () => {
                 <div className="bg-gradient-card rounded-xl p-6 border border-border/50">
                   <h3 className="text-xl font-semibold text-primary mb-3">Misyonumuz</h3>
                   <p className="text-foreground leading-relaxed">
-                    Teknoloji alanında yenilikçi çözümler geliştirerek müşterilerimizin dijital dönüşüm süreçlerinde 
-                    güvenilir iş ortağı olmak ve yerli teknoloji ekosisteminin gelişimine katkıda bulunmak.
+                    Müşterilerimizin ihtiyaçlarını net bir şekilde çıkarılması ve bu ihtiyacın karşılanması için en uygun teknolojinin sağlanması
+                    Müşteri memnuniyetini sürekliliğinin sağlanması
+                    Yüksek kalitede ürün ve hizmetler sunulması
+                    Teknoloji alt yapılarının hatasız bir şekilde hazırlanması
+                    Global pazarda rekabet edebilir teknolojilerin üretilmesi
+                    Bilgi toplumuna dönüşüm sürecinde Türkiye’nin rekabet gücünün ve refah seviyesinin artmasına destek verilmesi şeklindedir
                   </p>
                 </div>
               </div>
