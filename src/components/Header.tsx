@@ -3,31 +3,21 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-const navigation = [{
-  name: "Ana Sayfa",
-  href: "/"
-}, {
-  name: "Hakkımızda",
-  href: "/about"
-}, {
-  name: "Ürün & Hizmetler",
-  href: "/services"
-}, {
-  name: "Projeler",
-  href: "/projects"
-}, {
-  name: "Kariyer",
-  href: "/careers"
-}, {
-  name: "Referanslar",
-  href: "/references"
-}, {
-  name: "İletişim",
-  href: "/contact"
-}];
+import { useLanguage } from "@/contexts/LanguageContext";
+import { LanguageSelector } from "@/components/LanguageSelector";
+const navigationKeys = [
+  { key: "nav.home", href: "/" },
+  { key: "nav.about", href: "/about" },
+  { key: "nav.services", href: "/services" },
+  { key: "nav.projects", href: "/projects" },
+  { key: "nav.careers", href: "/careers" },
+  { key: "nav.references", href: "/references" },
+  { key: "nav.contact", href: "/contact" }
+];
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
   return <header className="bg-background/80 backdrop-blur-md border-b border-border/50 sticky top-0 z-50">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         {/* Logo */}
@@ -43,15 +33,16 @@ export function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex lg:gap-x-8">
-          {navigation.map(item => <Link key={item.name} to={item.href} className={cn("text-sm font-medium transition-colors hover:text-primary relative py-2", location.pathname === item.href ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full" : "text-foreground/70")}>
-              {item.name}
+          {navigationKeys.map(item => <Link key={item.key} to={item.href} className={cn("text-sm font-medium transition-colors hover:text-primary relative py-2", location.pathname === item.href ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full" : "text-foreground/70")}>
+              {t(item.key)}
             </Link>)}
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        {/* Language Selector & CTA Button */}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
+          <LanguageSelector />
           <Button variant="hero" asChild>
-            
+            <Link to="/contact">{t("nav.contact")}</Link>
           </Button>
         </div>
 
@@ -83,14 +74,17 @@ export function Header() {
               <div className="mt-6 flow-root">
                 <div className="-my-6 divide-y divide-border">
                   <div className="space-y-2 py-6">
-                    {navigation.map(item => <Link key={item.name} to={item.href} onClick={() => setMobileMenuOpen(false)} className={cn("block rounded-lg px-3 py-2 text-base font-medium transition-colors hover:bg-muted", location.pathname === item.href ? "text-primary bg-primary/5" : "text-foreground")}>
-                        {item.name}
+                    {navigationKeys.map(item => <Link key={item.key} to={item.href} onClick={() => setMobileMenuOpen(false)} className={cn("block rounded-lg px-3 py-2 text-base font-medium transition-colors hover:bg-muted", location.pathname === item.href ? "text-primary bg-primary/5" : "text-foreground")}>
+                        {t(item.key)}
                       </Link>)}
                   </div>
-                  <div className="py-6">
+                  <div className="py-6 space-y-4">
+                    <div className="flex justify-center">
+                      <LanguageSelector />
+                    </div>
                     <Button variant="hero" className="w-full" asChild>
                       <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
-                        İletişime Geç
+                        {t("nav.contact")}
                       </Link>
                     </Button>
                   </div>

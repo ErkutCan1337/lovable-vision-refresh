@@ -1,32 +1,37 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ImageCarousel } from "@/components/ImageCarousel";
+import { useLanguage } from "@/contexts/LanguageContext";
 import teamConsultingImage from "@/assets/team-consulting.jpg";
 import officeExteriorImage from "@/assets/office-exterior.jpg";
 import teamCollaborationImage from "@/assets/team-collaboration.jpg";
 import officeBuildingImage from "@/assets/office-building.jpg";
+
 const About = () => {
+  const { t } = useLanguage();
+  
   const carouselSlides = [{
     image: teamConsultingImage,
-    title: "Uzman Danışmanlık",
-    description: "15+ yıllık deneyimimizle teknoloji çözümleri sunuyoruz"
+    title: t("carousel.expert_consulting.title"),
+    description: t("carousel.expert_consulting.description")
   }, {
     image: teamCollaborationImage,
-    title: "Takım Çalışması",
-    description: "Profesyonel ekibimizle müşteri odaklı hizmet"
+    title: t("carousel.team_work.title"),
+    description: t("carousel.team_work.description")
   }, {
     image: officeBuildingImage,
-    title: "Modern Ofis",
-    description: "Ankara merkezli güçlü altyapımız"
+    title: t("carousel.modern_office.title"),
+    description: t("carousel.modern_office.description")
   }, {
     image: "/lovable-uploads/c042e8b6-1a7e-45de-9d31-1bed58dacbac.png",
-    title: "Teknoloji Merkezi",
-    description: "Yenilikçi çözümler geliştirme merkezi"
+    title: t("carousel.tech_center.title"),
+    description: t("carousel.tech_center.description")
   }, {
     image: "/lovable-uploads/6f07a378-ac26-46b5-aba8-8d59796b538f.png",
-    title: "Information Technology Corporation (USA)",
-    description: "Uluslararası teknoloji iş birliği"
+    title: t("carousel.itc_usa.title"),
+    description: t("carousel.itc_usa.description")
   }];
+  
   return <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-16 pb-24">
@@ -34,10 +39,10 @@ const About = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
-              Hakkımızda
+              {t("about.title")}
             </h1>
             <p className="text-xl max-w-3xl mx-auto mb-12 slide-up text-slate-50">
-              2C olarak müşterilerimize ihtiyacı doğrultusunda değer oluşturmayı ve entegre çözümler sunarak platform bağımsız bir şekilde çalışmalarına devam etmekteyiz. Firmamız, verimliliğin artırılması, rekabet üstünlüğünün sağlanmasını ve ölçülebilir maliyet kazancının oluşması için müşteri odaklı bir firma olmayı ön planda tutmaktadır. Yenilikçi fikirlerimiz ve pazar-odaklı hizmetlerimiz aracılığıyla daha güvenli ve sağlıklı yaşam için karşılaşılan sorunları çözerek sürdürülebilir bir başarı amaçlıyoruz.
+              {t("about.hero.description")}
             </p>
           </div>
 
@@ -50,63 +55,56 @@ const About = () => {
             {/* Content with Visual Enhancement */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
               <div className="space-y-6">
-                <h2 className="text-3xl font-bold text-foreground">Detaylarla 2C</h2>
+                <h2 className="text-3xl font-bold text-foreground">{t("about.details.title")}</h2>
                 <p className="text-lg text-foreground leading-relaxed">
-                  2C, ülkemiz ekonomisine katkı sağlayan yerli teknolojiler üretebilen, rekabet edilebilir ürünler ve 
-                  çözümler sunan, müşteri odaklı kaliteli hizmet veren bir teknoloji şirketi olarak faaliyet göstermektedir.
+                  {t("about.details.p1")}
                 </p>
                 
                 <p className="text-lg text-foreground leading-relaxed">
-                  Uzman kadromuz ile sistem entegrasyon, veri merkezi çözümleri, süper bilgisayar teknolojileri, 
-                  bilişim güvenliği, sanallaştırma ve felaket kurtarma alanlarında kapsamlı hizmetler sunmaktayız.
+                  {t("about.details.p2")}
                 </p>
 
                 <div className="bg-gradient-card rounded-xl p-6 border border-border/50">
-                  <h3 className="text-xl font-semibold text-primary mb-3">Misyonumuz</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-3">{t("about.mission.title")}</h3>
                   <p className="text-foreground leading-relaxed">
-                    Müşterilerimizin ihtiyaçlarını net bir şekilde çıkarılması ve bu ihtiyacın karşılanması için en uygun teknolojinin sağlanması
-                    Müşteri memnuniyetini sürekliliğinin sağlanması
-                    Yüksek kalitede ürün ve hizmetler sunulması
-                    Teknoloji alt yapılarının hatasız bir şekilde hazırlanması
-                    Global pazarda rekabet edebilir teknolojilerin üretilmesi
-                    Bilgi toplumuna dönüşüm sürecinde Türkiye’nin rekabet gücünün ve refah seviyesinin artmasına destek verilmesi şeklindedir
+                    {t("about.mission.description")}
                   </p>
                 </div>
               </div>
               
               <div className="space-y-6">
                 <div className="bg-gradient-card rounded-xl p-6 border border-border/50">
-                  <h3 className="text-xl font-semibold text-primary mb-4">Neden 2C?</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-4">{t("about.why2c.title")}</h3>
                   <ul className="space-y-3">
                     <li className="flex items-center text-foreground">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                      15+ yıllık sektör deneyimi
+                      {t("about.why2c.experience")}
                     </li>
                     <li className="flex items-center text-foreground">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                      Uzman teknik kadro
+                      {t("about.why2c.expert_team")}
                     </li>
                     <li className="flex items-center text-foreground">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                      Müşteri odaklı hizmet anlayışı
+                      {t("about.why2c.customer_focused")}
                     </li>
                     <li className="flex items-center text-foreground">
                       <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                      Yerli teknoloji odaklı çözümler
+                      {t("about.why2c.local_tech")}
                     </li>
                   </ul>
                 </div>
 
                 <div className="bg-gradient-card rounded-xl p-6 border border-border/50">
-                  <h3 className="text-xl font-semibold text-primary mb-4">Başarı Hikayeleri</h3>
+                  <h3 className="text-xl font-semibold text-primary mb-4">{t("about.success_stories.title")}</h3>
                   <div className="grid grid-cols-2 gap-4 text-center">
                     <div>
                       <div className="text-2xl font-bold text-primary">200+</div>
-                      <div className="text-sm text-muted-foreground">Tamamlanan Proje</div>
+                      <div className="text-sm text-muted-foreground">{t("about.success_stories.projects")}</div>
                     </div>
                     <div>
                       <div className="text-2xl font-bold text-primary">50+</div>
-                      <div className="text-sm text-muted-foreground">Mutlu Müşteri</div>
+                      <div className="text-sm text-muted-foreground">{t("about.success_stories.customers")}</div>
                     </div>
                   </div>
                 </div>
@@ -119,9 +117,9 @@ const About = () => {
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl text-primary-foreground">🎯</span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">Vizyon</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-3">{t("about.vision.title")}</h3>
                 <p className="text-muted-foreground">
-                  Teknoloji alanında öncü ve güvenilir bir marka olmak
+                  {t("about.vision.description")}
                 </p>
               </div>
               
@@ -129,9 +127,9 @@ const About = () => {
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl text-primary-foreground">⚡</span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">İnovasyon</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-3">{t("about.innovation.title")}</h3>
                 <p className="text-muted-foreground">
-                  Sürekli gelişim ve yenilikçi çözümler
+                  {t("about.innovation.description")}
                 </p>
               </div>
               
@@ -139,9 +137,9 @@ const About = () => {
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-2xl text-primary-foreground">🤝</span>
                 </div>
-                <h3 className="text-lg font-semibold text-foreground mb-3">Güven</h3>
+                <h3 className="text-lg font-semibold text-foreground mb-3">{t("about.trust.title")}</h3>
                 <p className="text-muted-foreground">
-                  Müşteri memnuniyeti odaklı hizmet anlayışı
+                  {t("about.trust.description")}
                 </p>
               </div>
             </div>
@@ -149,9 +147,9 @@ const About = () => {
             {/* Academy-University Partnership Section */}
             <div className="mt-16">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-foreground mb-6">Akademi-Üniversite İş Birliği</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-6">{t("about.partnership.title")}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-                  Türkiye'nin önde gelen üniversiteleri ve araştırma kurumları ile stratejik iş birlikleri gerçekleştiriyoruz.
+                  {t("about.partnership.description")}
                 </p>
               </div>
               
@@ -159,7 +157,7 @@ const About = () => {
                 <div className="max-w-4xl mx-auto">
                   <img 
                     src="/lovable-uploads/1de01bad-b817-4cfc-a93c-f7e8b5ebf769.png" 
-                    alt="Akademi-Üniversite İş Birliği - ODTÜ, İTÜ, Galatasaray Üniversitesi, TOBB ETÜ, Atılım Üniversitesi, Antalya Üniversitesi" 
+                    alt={t("about.partnership.alt")}
                     className="w-full h-auto rounded-xl shadow-md"
                   />
                 </div>
