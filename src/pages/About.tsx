@@ -19,7 +19,7 @@ const About = () => {
     title: "Modern Ofis",
     description: "Ankara merkezli güçlü altyapımız"
   }, {
-    image: officeExteriorImage,
+    image: "/lovable-uploads/c042e8b6-1a7e-45de-9d31-1bed58dacbac.png",
     title: "Teknoloji Merkezi",
     description: "Yenilikçi çözümler geliştirme merkezi"
   }];
