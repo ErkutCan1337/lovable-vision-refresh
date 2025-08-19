@@ -41,8 +41,7 @@ const About = () => {
               Hakkımızda
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 slide-up">
-              2C olarak müşterilerimize ihtiyacı doğrultusunda değer oluşturmayı ve entegre çözümler sunarak 
-              platform bağımsız bir şekilde çalışmalarına devam etmekteyiz.
+              2C olarak müşterilerimize ihtiyacı doğrultusunda değer oluşturmayı ve entegre çözümler sunarak platform bağımsız bir şekilde çalışmalarına devam etmekteyiz. Firmamız, verimliliğin artırılması, rekabet üstünlüğünün sağlanmasını ve ölçülebilir maliyet kazancının oluşması için müşteri odaklı bir firma olmayı ön planda tutmaktadır. Yenilikçi fikirlerimiz ve pazar-odaklı hizmetlerimiz aracılığıyla daha güvenli ve sağlıklı yaşam için karşılaşılan sorunları çözerek sürdürülebilir bir başarı amaçlıyoruz.
             </p>
           </div>
 
