@@ -6,31 +6,33 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Mail, Phone, Building2 } from "lucide-react";
-
-const contactInfo = [
-  {
-    icon: MapPin,
-    title: "Merkez Ofis",
-    details: ["Mutlukent Mah. 2037. Cad. No:30", "Çankaya, Ankara, Türkiye"]
-  },
-  {
-    icon: Building2, 
-    title: "ArGe Ofisi",
-    details: ["Gazi Teknopark B Blok No:19", "Gölbaşı, Ankara, Türkiye"]
-  },
-  {
-    icon: Mail,
-    title: "E-posta",
-    details: ["info@2cteknoloji.com", "destek@2cteknoloji.com"]
-  },
-  {
-    icon: Phone,
-    title: "Telefon",
-    details: ["+90 312 XXX XX XX", "+90 312 XXX XX XX"]
-  }
-];
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Contact = () => {
+  const { t } = useLanguage();
+  
+  const contactInfo = [
+    {
+      icon: MapPin,
+      titleKey: "contact.office_main",
+      details: ["Mutlukent Mah. 2037. Cad. No:30", "Çankaya, Ankara, Türkiye"]
+    },
+    {
+      icon: Building2, 
+      titleKey: "contact.office_rnd",
+      details: ["Gazi Teknopark B Blok No:19", "Gölbaşı, Ankara, Türkiye"]
+    },
+    {
+      icon: Mail,
+      titleKey: "contact.email",
+      details: ["info@2cteknoloji.com", "destek@2cteknoloji.com"]
+    },
+    {
+      icon: Phone,
+      titleKey: "contact.phone",
+      details: ["+90 312 XXX XX XX", "+90 312 XXX XX XX"]
+    }
+  ];
   return (
     <div className="min-h-screen">
       <Header />
@@ -39,11 +41,10 @@ const Contact = () => {
           {/* Header Section */}
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              İletişim
+              {t("contact.title")}
             </h1>
             <p className="text-lg leading-8 text-muted-foreground">
-              Projeleriniz ve teknoloji ihtiyaçlarınız hakkında bizimle iletişime geçin. 
-              Uzman ekibimiz size en uygun çözümleri sunmak için hazır.
+              {t("contact.subtitle")}
             </p>
           </div>
 
@@ -53,56 +54,56 @@ const Contact = () => {
               <Card className="card-gradient border-border/50">
                 <CardHeader>
                   <CardTitle className="text-2xl font-semibold text-foreground">
-                    Bizimle İletişime Geçin
+                    {t("contact.get_in_touch")}
                   </CardTitle>
                   <CardDescription className="text-muted-foreground">
-                    Formu doldurarak bize ulaşabilir, projeleriniz hakkında bilgi alabilirsiniz.
+                    {t("contact.form_description")}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form className="space-y-6">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="firstName">Ad</Label>
-                        <Input id="firstName" placeholder="Adınız" className="mt-1" />
+                        <Label htmlFor="firstName">{t("contact.form.first_name")}</Label>
+                        <Input id="firstName" placeholder={t("contact.form.first_name_placeholder")} className="mt-1" />
                       </div>
                       <div>
-                        <Label htmlFor="lastName">Soyad</Label>
-                        <Input id="lastName" placeholder="Soyadınız" className="mt-1" />
+                        <Label htmlFor="lastName">{t("contact.form.last_name")}</Label>
+                        <Input id="lastName" placeholder={t("contact.form.last_name_placeholder")} className="mt-1" />
                       </div>
                     </div>
                     
                     <div>
-                      <Label htmlFor="email">E-posta</Label>
-                      <Input id="email" type="email" placeholder="ornek@email.com" className="mt-1" />
+                      <Label htmlFor="email">{t("contact.form.email")}</Label>
+                      <Input id="email" type="email" placeholder={t("contact.form.email_example")} className="mt-1" />
                     </div>
                     
                     <div>
-                      <Label htmlFor="phone">Telefon</Label>
-                      <Input id="phone" placeholder="+90 5XX XXX XX XX" className="mt-1" />
+                      <Label htmlFor="phone">{t("contact.form.phone")}</Label>
+                      <Input id="phone" placeholder={t("contact.form.phone_placeholder")} className="mt-1" />
                     </div>
                     
                     <div>
-                      <Label htmlFor="company">Şirket</Label>
-                      <Input id="company" placeholder="Şirket adınız" className="mt-1" />
+                      <Label htmlFor="company">{t("contact.form.company")}</Label>
+                      <Input id="company" placeholder={t("contact.form.company_placeholder")} className="mt-1" />
                     </div>
                     
                     <div>
-                      <Label htmlFor="subject">Konu</Label>
-                      <Input id="subject" placeholder="Mesajınızın konusu" className="mt-1" />
+                      <Label htmlFor="subject">{t("contact.form.subject")}</Label>
+                      <Input id="subject" placeholder={t("contact.form.subject_placeholder_detailed")} className="mt-1" />
                     </div>
                     
                     <div>
-                      <Label htmlFor="message">Mesaj</Label>
+                      <Label htmlFor="message">{t("contact.form.message")}</Label>
                       <Textarea 
                         id="message" 
-                        placeholder="Projeniz veya ihtiyacınız hakkında detaylı bilgi veriniz..." 
+                        placeholder={t("contact.form.message_placeholder_detailed")} 
                         className="mt-1 min-h-[120px]" 
                       />
                     </div>
                     
                     <Button variant="hero" size="lg" className="w-full">
-                      Mesaj Gönder
+                      {t("contact.form.send")}
                     </Button>
                   </form>
                 </CardContent>
@@ -112,12 +113,12 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-2xl font-semibold text-foreground mb-6">İletişim Bilgileri</h2>
+                <h2 className="text-2xl font-semibold text-foreground mb-6">{t("contact.info_title")}</h2>
                 <div className="space-y-6">
                   {contactInfo.map((info) => {
                     const Icon = info.icon;
                     return (
-                      <Card key={info.title} className="border-border/50">
+                      <Card key={info.titleKey} className="border-border/50">
                         <CardContent className="pt-6">
                           <div className="flex items-start space-x-4">
                             <div className="flex-shrink-0">
@@ -126,7 +127,7 @@ const Contact = () => {
                               </div>
                             </div>
                             <div>
-                              <h3 className="font-semibold text-foreground mb-2">{info.title}</h3>
+                              <h3 className="font-semibold text-foreground mb-2">{t(info.titleKey)}</h3>
                               {info.details.map((detail, idx) => (
                                 <p key={idx} className="text-sm text-muted-foreground">
                                   {detail}
@@ -144,17 +145,17 @@ const Contact = () => {
               {/* Additional Info */}
               <Card className="border-border/50 bg-muted/30">
                 <CardContent className="pt-6">
-                  <h3 className="font-semibold text-foreground mb-3">Çalışma Saatleri</h3>
+                  <h3 className="font-semibold text-foreground mb-3">{t("contact.working_hours")}</h3>
                   <div className="space-y-1 text-sm text-muted-foreground">
-                    <p>Pazartesi - Cuma: 09:00 - 18:00</p>
-                    <p>Cumartesi: 09:00 - 13:00</p>
-                    <p>Pazar: Kapalı</p>
+                    <p>{t("contact.working_hours.weekdays")}</p>
+                    <p>{t("contact.working_hours.saturday")}</p>
+                    <p>{t("contact.working_hours.sunday")}</p>
                   </div>
                   
                   <div className="mt-6">
-                    <h4 className="font-semibold text-foreground mb-2">Acil Destek</h4>
+                    <h4 className="font-semibold text-foreground mb-2">{t("contact.emergency_support")}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Kritik sistemler için 7/24 acil destek hizmeti mevcuttur.
+                      {t("contact.emergency_description")}
                     </p>
                   </div>
                 </CardContent>
