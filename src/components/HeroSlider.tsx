@@ -58,21 +58,21 @@ export function HeroSlider() {
   const slides = [
     {
       image: heroDatacenter,
-      title: "Veri Merkezi Çözümleri",
+      title: "İleri Teknoloji Çözümleri",
       description: "Yeni nesil altyapı teknolojileri ile geleceği inşa ediyoruz",
       cta: "Keşfedin",
       link: "/services"
     },
     {
       image: heroHpc,
-      title: "Yüksek Performans Bilişim",
+      title: "Yüksek Standartlarda Hizmet",
       description: "Süper bilgisayar teknolojileri ile sınırları aşın",
       cta: "Keşfedin",
       link: "/services"
     },
     {
       image: heroSecurity,
-      title: "Siber Güvenlik",
+      title: "Arge Ürünleri",
       description: "Gelişmiş güvenlik çözümleri ile verilerinizi koruyun",
       cta: "Keşfedin",
       link: "/services"
