@@ -22,6 +22,10 @@ const About = () => {
     image: "/lovable-uploads/c042e8b6-1a7e-45de-9d31-1bed58dacbac.png",
     title: "Teknoloji Merkezi",
     description: "Yenilikçi çözümler geliştirme merkezi"
+  }, {
+    image: "/lovable-uploads/6f07a378-ac26-46b5-aba8-8d59796b538f.png",
+    title: "Information Technology Corporation (USA)",
+    description: "Uluslararası teknoloji iş birliği"
   }];
   return <div className="min-h-screen bg-background">
       <Header />
