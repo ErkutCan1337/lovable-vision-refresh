@@ -92,7 +92,45 @@ const translations = {
     
     // References
     'references.title': 'Referanslarımız',
-    'references.subtitle': 'Güvenilir ortaklıklarımızla sektörde öncü konumumuzu sürdürüyoruz',
+    'references.subtitle': 'Güvenilir teknoloji partneri olarak birçok kurumsal müşteriyle uzun vadeli işbirlikleri gerçekleştiriyoruz. İşte bizimle çalışan değerli kurumlarımız.',
+    'references.stats.clients': 'Kurumsal Müşteri',
+    'references.stats.clients_desc': 'Çeşitli sektörlerden',
+    'references.stats.projects': 'Başarılı Proje',
+    'references.stats.projects_desc': 'Tamamlanan işler',
+    'references.stats.experience': 'Yıl Deneyim',
+    'references.stats.experience_desc': 'Sektörde tecrübe',
+    'references.stats.satisfaction': 'Müşteri Memnuniyeti',
+    'references.stats.satisfaction_desc': 'Kaliteli hizmet',
+    'references.partners_title': 'İş Ortaklarımız ve Referanslarımız',
+    'references.sectors_title': 'Hizmet Verdiğimiz Sektörler',
+    
+    // Reference slides
+    'references.slide1.title': 'Kamu Kurumları',
+    'references.slide1.description': 'Türkiye\'nin önde gelen bakanlık ve kamu kurumlarıyla stratejik ortaklıklar kurarak dijital dönüşüm projelerinde liderlik ediyoruz.',
+    'references.slide2.title': 'Üniversite & Akademik Kurumlar',
+    'references.slide2.description': 'Türkiye\'nin prestijli üniversiteleriyle akademik işbirliği yaparak eğitim teknolojileri ve araştırma projelerinde aktif rol alıyoruz.',
+    'references.slide3.title': 'Özel Sektör & Kurumlar',
+    'references.slide3.description': 'Belediyeler, özel kuruluşlar ve sivil toplum organizasyonları ile çeşitli teknoloji çözümleri geliştiriyoruz.',
+    
+    // Sectors
+    'references.sectors.education': 'Eğitim',
+    'references.sectors.defense': 'Savunma',
+    'references.sectors.health': 'Sağlık',
+    'references.sectors.public': 'Kamu',
+    'references.sectors.finance': 'Finans',
+    'references.sectors.energy': 'Enerji',
+    'references.sectors.telecom': 'Telekomünikasyon',
+    'references.sectors.automotive': 'Otomotiv',
+    'references.sectors.manufacturing': 'İmalat',
+    'references.sectors.logistics': 'Lojistik',
+    'references.sectors.tourism': 'Turizm',
+    'references.sectors.agriculture': 'Tarım',
+    
+    // CTA Section
+    'references.cta.title': 'Bizimle Çalışmak İster misiniz?',
+    'references.cta.description': 'Teknoloji projelerinizde güvenilir iş ortağı arıyorsanız, uzman ekibimizle size özel çözümler geliştirebiliriz.',
+    'references.cta.contact': 'İrtibata Geçin',
+    'references.cta.services': 'Hizmetlerimizi İnceleyin',
     
     // Careers
     'careers.title': 'Kariyer Fırsatları',
@@ -304,7 +342,45 @@ const translations = {
     
     // References
     'references.title': 'Our References',
-    'references.subtitle': 'We maintain our leading position in the industry with our reliable partnerships',
+    'references.subtitle': 'As a reliable technology partner, we establish long-term collaborations with many corporate clients. Here are our valued institutions that work with us.',
+    'references.stats.clients': 'Corporate Clients',
+    'references.stats.clients_desc': 'From various sectors',
+    'references.stats.projects': 'Successful Projects',
+    'references.stats.projects_desc': 'Completed works',
+    'references.stats.experience': 'Years Experience',
+    'references.stats.experience_desc': 'Industry expertise',
+    'references.stats.satisfaction': 'Customer Satisfaction',
+    'references.stats.satisfaction_desc': 'Quality service',
+    'references.partners_title': 'Our Business Partners and References',
+    'references.sectors_title': 'Sectors We Serve',
+    
+    // Reference slides
+    'references.slide1.title': 'Public Institutions',
+    'references.slide1.description': 'We lead digital transformation projects by establishing strategic partnerships with Turkey\'s leading ministries and public institutions.',
+    'references.slide2.title': 'University & Academic Institutions',
+    'references.slide2.description': 'We play an active role in educational technologies and research projects through academic cooperation with Turkey\'s prestigious universities.',
+    'references.slide3.title': 'Private Sector & Institutions',
+    'references.slide3.description': 'We develop various technology solutions with municipalities, private organizations and civil society organizations.',
+    
+    // Sectors
+    'references.sectors.education': 'Education',
+    'references.sectors.defense': 'Defense',
+    'references.sectors.health': 'Health',
+    'references.sectors.public': 'Public',
+    'references.sectors.finance': 'Finance',
+    'references.sectors.energy': 'Energy',
+    'references.sectors.telecom': 'Telecommunications',
+    'references.sectors.automotive': 'Automotive',
+    'references.sectors.manufacturing': 'Manufacturing',
+    'references.sectors.logistics': 'Logistics',
+    'references.sectors.tourism': 'Tourism',
+    'references.sectors.agriculture': 'Agriculture',
+    
+    // CTA Section
+    'references.cta.title': 'Would You Like to Work With Us?',
+    'references.cta.description': 'If you are looking for a reliable business partner for your technology projects, we can develop customized solutions for you with our expert team.',
+    'references.cta.contact': 'Get In Touch',
+    'references.cta.services': 'Review Our Services',
     
     // Careers
     'careers.title': 'Career Opportunities',

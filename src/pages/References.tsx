@@ -2,24 +2,42 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ReferencesSlider } from "@/components/ReferencesSlider";
 import { Building2, Users, Award, Handshake } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const References = () => {
+  const { t } = useLanguage();
+  
   const referenceSlides = [
     {
       image: "/lovable-uploads/fde2526d-5c5b-407c-800a-30d1b8f0f766.png",
-      title: "Kamu Kurumları",
-      description: "Türkiye'nin önde gelen bakanlık ve kamu kurumlarıyla stratejik ortaklıklar kurarak dijital dönüşüm projelerinde liderlik ediyoruz."
+      title: t("references.slide1.title"),
+      description: t("references.slide1.description")
     },
     {
       image: "/lovable-uploads/6d37afee-58c6-467e-9e16-e824f40f3c94.png",
-      title: "Üniversite & Akademik Kurumlar",
-      description: "Türkiye'nin prestijli üniversiteleriyle akademik işbirliği yaparak eğitim teknolojileri ve araştırma projelerinde aktif rol alıyoruz."
+      title: t("references.slide2.title"),
+      description: t("references.slide2.description")
     },
     {
       image: "/lovable-uploads/00c495b0-56d9-4818-8ef6-25ea2c641c8d.png",
-      title: "Özel Sektör & Kurumlar",
-      description: "Belediyeler, özel kuruluşlar ve sivil toplum organizasyonları ile çeşitli teknoloji çözümleri geliştiriyoruz."
+      title: t("references.slide3.title"),
+      description: t("references.slide3.description")
     }
+  ];
+
+  const sectors = [
+    "references.sectors.education",
+    "references.sectors.defense", 
+    "references.sectors.health",
+    "references.sectors.public",
+    "references.sectors.finance",
+    "references.sectors.energy",
+    "references.sectors.telecom",
+    "references.sectors.automotive",
+    "references.sectors.manufacturing",
+    "references.sectors.logistics",
+    "references.sectors.tourism",
+    "references.sectors.agriculture"
   ];
 
   return (
@@ -30,11 +48,10 @@ const References = () => {
           {/* Header Section */}
           <div className="mx-auto max-w-3xl text-center mb-16">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              Referanslarımız
+              {t("references.title")}
             </h1>
             <p className="text-lg leading-8 text-muted-foreground">
-              Güvenilir teknoloji partneri olarak birçok kurumsal müşteriyle uzun vadeli işbirlikleri gerçekleştiriyoruz. 
-              İşte bizimle çalışan değerli kurumlarımız.
+              {t("references.subtitle")}
             </p>
           </div>
 
@@ -46,8 +63,8 @@ const References = () => {
                   <Building2 className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <div className="text-3xl font-bold text-foreground mb-1">50+</div>
-                <div className="text-lg font-semibold text-foreground mb-1">Kurumsal Müşteri</div>
-                <div className="text-sm text-muted-foreground">Çeşitli sektörlerden</div>
+                <div className="text-lg font-semibold text-foreground mb-1">{t("references.stats.clients")}</div>
+                <div className="text-sm text-muted-foreground">{t("references.stats.clients_desc")}</div>
               </div>
               
               <div className="text-center fade-in" style={{animationDelay: '0.1s'}}>
@@ -55,8 +72,8 @@ const References = () => {
                   <Award className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <div className="text-3xl font-bold text-foreground mb-1">200+</div>
-                <div className="text-lg font-semibold text-foreground mb-1">Başarılı Proje</div>
-                <div className="text-sm text-muted-foreground">Tamamlanan işler</div>
+                <div className="text-lg font-semibold text-foreground mb-1">{t("references.stats.projects")}</div>
+                <div className="text-sm text-muted-foreground">{t("references.stats.projects_desc")}</div>
               </div>
               
               <div className="text-center fade-in" style={{animationDelay: '0.2s'}}>
@@ -64,8 +81,8 @@ const References = () => {
                   <Users className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <div className="text-3xl font-bold text-foreground mb-1">15+</div>
-                <div className="text-lg font-semibold text-foreground mb-1">Yıl Deneyim</div>
-                <div className="text-sm text-muted-foreground">Sektörde tecrübe</div>
+                <div className="text-lg font-semibold text-foreground mb-1">{t("references.stats.experience")}</div>
+                <div className="text-sm text-muted-foreground">{t("references.stats.experience_desc")}</div>
               </div>
               
               <div className="text-center fade-in" style={{animationDelay: '0.3s'}}>
@@ -73,8 +90,8 @@ const References = () => {
                   <Handshake className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <div className="text-3xl font-bold text-foreground mb-1">%98</div>
-                <div className="text-lg font-semibold text-foreground mb-1">Müşteri Memnuniyeti</div>
-                <div className="text-sm text-muted-foreground">Kaliteli hizmet</div>
+                <div className="text-lg font-semibold text-foreground mb-1">{t("references.stats.satisfaction")}</div>
+                <div className="text-sm text-muted-foreground">{t("references.stats.satisfaction_desc")}</div>
               </div>
             </div>
           </div>
@@ -82,7 +99,7 @@ const References = () => {
           {/* Partners Section */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              İş Ortaklarımız ve Referanslarımız
+              {t("references.partners_title")}
             </h2>
             
             <ReferencesSlider slides={referenceSlides} />
@@ -91,19 +108,16 @@ const References = () => {
           {/* Sectors We Serve */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              Hizmet Verdiğimiz Sektörler
+              {t("references.sectors_title")}
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              {[
-                "Eğitim", "Savunma", "Sağlık", "Kamu", "Finans", "Enerji",
-                "Telekomünikasyon", "Otomotiv", "İmalat", "Lojistik", "Turizm", "Tarım"
-              ].map((sector, index) => (
+              {sectors.map((sectorKey, index) => (
                 <div 
-                  key={sector} 
+                  key={sectorKey} 
                   className="bg-gradient-card rounded-lg p-4 text-center border border-border/50 glow-on-hover fade-in"
                   style={{animationDelay: `${index * 0.05}s`}}
                 >
-                  <span className="text-sm font-medium text-foreground">{sector}</span>
+                  <span className="text-sm font-medium text-foreground">{t(sectorKey)}</span>
                 </div>
               ))}
             </div>
@@ -112,24 +126,23 @@ const References = () => {
           {/* CTA Section */}
           <div className="text-center bg-background rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Bizimle Çalışmak İster misiniz?
+              {t("references.cta.title")}
             </h2>
             <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-              Teknoloji projelerinizde güvenilir iş ortağı arıyorsanız, uzman ekibimizle 
-              size özel çözümler geliştirebiliriz.
+              {t("references.cta.description")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
                 className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground px-8 py-3 text-sm font-semibold shadow-sm hover:bg-primary/90 transition-colors"
               >
-                İrtibata Geçin
+                {t("references.cta.contact")}
               </a>
               <a 
                 href="/services" 
                 className="inline-flex items-center justify-center rounded-lg border border-white/20 text-white px-8 py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
               >
-                Hizmetlerimizi İnceleyin
+                {t("references.cta.services")}
               </a>
             </div>
           </div>
