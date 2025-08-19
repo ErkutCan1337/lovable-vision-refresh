@@ -1,120 +1,73 @@
-# 2C Teknoloji - Static Website
+# Welcome to your Lovable project
 
-A fully static website for 2C Teknoloji built with HTML, CSS, Bootstrap, and vanilla JavaScript.
+## Project info
 
-## Features
+**URL**: https://lovable.dev/projects/bde9ae65-e9fd-4e2c-82e4-c44db95095a5
 
-- 🚀 **100% Static** - No Node.js or React dependencies
-- 🌍 **Multi-language** - Turkish/English language switching
-- 📱 **Responsive Design** - Bootstrap 5 responsive components
-- ✨ **Modern UI** - Custom CSS with animations and effects
-- 🎯 **SEO Optimized** - Meta tags and semantic HTML
-- 🖼️ **Image Sliders** - Bootstrap carousel components
-- 🎨 **Interactive Elements** - Smooth animations and hover effects
+## How can I edit this code?
 
-## Structure
+There are several ways of editing your application.
 
-```
-├── index.html              # Homepage
-├── about.html              # About page
-├── services.html           # Services page
-├── projects.html           # Projects page
-├── careers.html            # Careers page
-├── references.html         # References page
-├── contact.html            # Contact page
-├── assets/
-│   ├── css/
-│   │   └── styles.css      # Custom styling
-│   └── js/
-│       ├── app.js          # Main JavaScript functionality
-│       └── translations.js # Language system
-└── public/
-    └── lovable-uploads/    # Image assets
-```
+**Use Lovable**
 
-## Technology Stack
+Simply visit the [Lovable Project](https://lovable.dev/projects/bde9ae65-e9fd-4e2c-82e4-c44db95095a5) and start prompting.
 
-- **HTML5** - Semantic markup
-- **CSS3** - Custom styles with CSS variables
-- **Bootstrap 5** - Responsive components and utilities
-- **Bootstrap Icons** - Icon library
-- **Vanilla JavaScript** - Interactive functionality
-- **Translation System** - Custom multi-language support
+Changes made via Lovable will be committed automatically to this repo.
 
-## Features
+**Use your preferred IDE**
 
-### Language System
-- Turkish (default) and English support
-- Local storage persistence
-- Dynamic content translation
-- Fallback to original text for missing translations
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-### Interactive Components
-- Hero carousel with touch support
-- Smooth scrolling navigation
-- Animated counters
-- Parallax effects
-- Mobile-responsive menu
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-### SEO & Performance
-- Meta tags and Open Graph
-- Semantic HTML structure
-- Optimized images
-- Fast loading static assets
+Follow these steps:
 
-## Deployment
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-This is a static website that can be deployed to any web hosting service:
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-- **Shared Hosting** - Upload all files to public_html folder
-- **GitHub Pages** - Push to repository and enable Pages
-- **Netlify/Vercel** - Connect repository for automatic deployment
-- **CDN** - Any static hosting provider
+# Step 3: Install the necessary dependencies.
+npm i
 
-## Browser Support
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-- IE11+ (limited support)
-
-## Customization
-
-### Colors & Styling
-Edit `assets/css/styles.css` CSS variables:
-```css
-:root {
-  --primary: 33, 150, 243;
-  --secondary: 103, 58, 183;
-  /* ... other variables */
-}
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
 ```
 
-### Content Translation
-Add new translations in `assets/js/translations.js`:
-```javascript
-const translations = {
-  tr: {
-    'new.key': 'Turkish text',
-  },
-  en: {
-    'new.key': 'English text',
-  }
-};
-```
+**Edit a file directly in GitHub**
 
-### Adding New Pages
-1. Create new HTML file
-2. Copy header/footer structure from existing files
-3. Add navigation link to all pages
-4. Add translations if needed
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-## Performance Optimizations
+**Use GitHub Codespaces**
 
-- CSS and JS files are minified for production
-- Images are optimized for web
-- Bootstrap is loaded from CDN
-- Critical CSS is inlined where needed
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## License
+## What technologies are used for this project?
 
-© 2024 2C Teknoloji. All rights reserved.
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/bde9ae65-e9fd-4e2c-82e4-c44db95095a5) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
