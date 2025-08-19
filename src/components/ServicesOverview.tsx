@@ -13,9 +13,9 @@ export function ServicesOverview() {
       titleKey: "services.system_integration.title",
       descriptionKey: "services.system_integration.description",
       features: [
-        "services.features.infrastructure_design",
-        "services.features.system_integration",
-        "services.features.performance_optimization"
+        "Altyapı tasarımı", 
+        "Sistem entegrasyonu", 
+        "Performans optimizasyonu"
       ]
     },
     {
@@ -23,9 +23,9 @@ export function ServicesOverview() {
       titleKey: "services.data_center.title",
       descriptionKey: "services.data_center.description",
       features: [
-        "services.features.data_center_design", 
-        "services.features.infrastructure_setup", 
-        "services.features.monitoring_24_7"
+        "Veri merkezi tasarımı", 
+        "Altyapı kurulumu", 
+        "7/24 izleme"
       ]
     },
     {
@@ -33,9 +33,9 @@ export function ServicesOverview() {
       titleKey: "services.hpc.title",
       descriptionKey: "services.hpc.description",
       features: [
-        "services.features.hpc_cluster_setup", 
-        "services.features.performance_analysis", 
-        "services.features.scalable_solutions"
+        "HPC cluster kurulumu", 
+        "Performans analizi", 
+        "Ölçeklenebilir çözümler"
       ]
     },
     {
@@ -43,9 +43,9 @@ export function ServicesOverview() {
       titleKey: "services.security.title",
       descriptionKey: "services.security.description",
       features: [
-        "services.features.security_analysis", 
-        "services.features.protection_systems", 
-        "services.features.risk_management"
+        "Güvenlik analizi", 
+        "Koruma sistemleri", 
+        "Risk yönetimi"
       ]
     },
     {
@@ -53,9 +53,9 @@ export function ServicesOverview() {
       titleKey: "services.virtualization.title",
       descriptionKey: "services.virtualization.description",
       features: [
-        "services.features.vm_infrastructure", 
-        "services.features.resource_optimization", 
-        "services.features.central_management"
+        "VM altyapısı", 
+        "Kaynak optimizasyonu", 
+        "Merkezi yönetim"
       ]
     },
     {
@@ -63,9 +63,9 @@ export function ServicesOverview() {
       titleKey: "services.disaster_recovery.title",
       descriptionKey: "services.disaster_recovery.description",
       features: [
-        "services.features.backup_strategy", 
-        "services.features.recovery_plans", 
-        "services.features.business_continuity"
+        "Yedekleme stratejisi", 
+        "Kurtarma planları", 
+        "İş sürekliliği"
       ]
     }
   ];
@@ -110,7 +110,7 @@ export function ServicesOverview() {
                     {service.features.map((feature, idx) => (
                       <li key={idx} className="flex items-center text-sm text-muted-foreground">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
-                        {t(feature)}
+                        {feature}
                       </li>
                     ))}
                   </ul>
