@@ -66,14 +66,14 @@ export function HeroSlider() {
     {
       image: heroHpc,
       title: "Yüksek Standartlarda Hizmet",
-      description: "Süper bilgisayar teknolojileri ile sınırları aşın",
+      description: "Hizmette sınır tanımıyoruz",
       cta: "Keşfedin",
       link: "/services"
     },
     {
       image: heroSecurity,
       title: "Arge Ürünleri",
-      description: "Gelişmiş güvenlik çözümleri ile verilerinizi koruyun",
+      description: "Gelişmiş Arge Ürünleri",
       cta: "Keşfedin",
       link: "/services"
     }
