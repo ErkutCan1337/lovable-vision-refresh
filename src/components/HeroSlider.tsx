@@ -60,22 +60,22 @@ export function HeroSlider() {
   const slides = [
     {
       image: heroDatacenter,
-      titleKey: "home.hero.title",
-      descriptionKey: "home.hero.subtitle",
+      titleKey: "home.hero.slide1.title",
+      descriptionKey: "home.hero.slide1.description",
       ctaKey: "home.hero.cta",
       link: "/services"
     },
     {
       image: heroHpc,
-      titleKey: "services.hpc.title",
-      descriptionKey: "services.hpc.description",
+      titleKey: "home.hero.slide2.title",
+      descriptionKey: "home.hero.slide2.description",
       ctaKey: "home.hero.cta",
       link: "/services"
     },
     {
       image: heroSecurity,
-      titleKey: "services.security.title",
-      descriptionKey: "services.security.description",
+      titleKey: "home.hero.slide3.title",
+      descriptionKey: "home.hero.slide3.description",
       ctaKey: "home.hero.cta",
       link: "/services"
     }

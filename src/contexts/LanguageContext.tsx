@@ -26,6 +26,12 @@ const translations = {
     'home.hero.subtitle': '15+ yıllık deneyimimizle, sistem entegrasyon, veri merkezi çözümleri, süper bilgisayar teknolojileri ve bilişim güvenliği alanlarında kapsamlı hizmetler sunuyoruz.',
     'home.hero.cta': 'Hizmetlerimizi Keşfedin',
     'home.hero.contact': 'İletişime Geçin',
+    'home.hero.slide1.title': 'İLERİ TEKNOLOJİ ÇÖZÜMLERİ',
+    'home.hero.slide1.description': 'En son teknoloji ile güçlü ve güvenilir çözümler sunuyoruz.',
+    'home.hero.slide2.title': 'AR-GE ÜRÜNLERİ',
+    'home.hero.slide2.description': 'İnovatif araştırma ve geliştirme projelerimizle geleceği şekillendiriyoruz.',
+    'home.hero.slide3.title': 'YÜKSEK STANDART HİZMETLER',
+    'home.hero.slide3.description': 'Müşteri memnuniyetini ön planda tutarak kaliteli hizmet sunuyoruz.',
     
     // Services
     'services.title': 'Hizmetlerimiz',
@@ -151,6 +157,12 @@ const translations = {
     'home.hero.subtitle': 'With our 15+ years of experience, we provide comprehensive services in system integration, data center solutions, supercomputer technologies, and information security.',
     'home.hero.cta': 'Discover Our Services',
     'home.hero.contact': 'Get In Touch',
+    'home.hero.slide1.title': 'ADVANCED TECHNOLOGY SOLUTIONS',
+    'home.hero.slide1.description': 'We provide powerful and reliable solutions with the latest technology.',
+    'home.hero.slide2.title': 'R&D PRODUCTS',
+    'home.hero.slide2.description': 'We shape the future with our innovative research and development projects.',
+    'home.hero.slide3.title': 'HIGH-STANDARD SERVICES',
+    'home.hero.slide3.description': 'We provide quality service by prioritizing customer satisfaction.',
     
     // Services
     'services.title': 'Our Services',
