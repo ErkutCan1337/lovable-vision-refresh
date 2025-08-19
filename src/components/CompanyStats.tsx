@@ -41,7 +41,7 @@ export function CompanyStats() {
             {t("about.success_stories.title")} 2C
           </h2>
           <p className="text-lg leading-8 text-muted-foreground">
-            Yılların getirdiği deneyim ve müşteri memnuniyeti odaklı yaklaşımımızın sonuçları
+            {t("home.stats.subtitle")}
           </p>
         </div>
 
@@ -55,8 +55,8 @@ export function CompanyStats() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end">
               <div className="p-6 text-foreground">
-                <h3 className="text-xl font-bold mb-2">Uzman Ekibimiz</h3>
-                <p className="text-muted-foreground">Deneyimli teknisyenler ve mühendislerden oluşan güçlü kadromuz</p>
+                <h3 className="text-xl font-bold mb-2">{t("home.stats.team.title")}</h3>
+                <p className="text-muted-foreground">{t("home.stats.team.description")}</p>
               </div>
             </div>
           </div>
@@ -69,8 +69,8 @@ export function CompanyStats() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end">
               <div className="p-6 text-foreground">
-                <h3 className="text-xl font-bold mb-2">Modern Tesis</h3>
-                <p className="text-muted-foreground">Ankara merkezli teknoloji üssümüzden hizmet veriyoruz</p>
+                <h3 className="text-xl font-bold mb-2">{t("home.stats.facility.title")}</h3>
+                <p className="text-muted-foreground">{t("home.stats.facility.description")}</p>
               </div>
             </div>
           </div>
