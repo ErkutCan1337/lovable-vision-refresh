@@ -110,7 +110,7 @@ const References = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-primary rounded-2xl p-12">
+          <div className="text-center bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-12">
             <h2 className="text-3xl font-bold text-primary-foreground mb-4">
               Bizimle Çalışmak İster misiniz?
             </h2>
