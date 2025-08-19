@@ -1,10 +1,27 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { ReferencesSlider } from "@/components/ReferencesSlider";
 import { Building2, Users, Award, Handshake } from "lucide-react";
 
 const References = () => {
+  const referenceSlides = [
+    {
+      image: "/lovable-uploads/fde2526d-5c5b-407c-800a-30d1b8f0f766.png",
+      title: "Kamu Kurumları",
+      description: "Türkiye'nin önde gelen bakanlık ve kamu kurumlarıyla stratejik ortaklıklar kurarak dijital dönüşüm projelerinde liderlik ediyoruz."
+    },
+    {
+      image: "/lovable-uploads/6d37afee-58c6-467e-9e16-e824f40f3c94.png",
+      title: "Üniversite & Akademik Kurumlar",
+      description: "Türkiye'nin prestijli üniversiteleriyle akademik işbirliği yaparak eğitim teknolojileri ve araştırma projelerinde aktif rol alıyoruz."
+    },
+    {
+      image: "/lovable-uploads/00c495b0-56d9-4818-8ef6-25ea2c641c8d.png",
+      title: "Özel Sektör & Kurumlar",
+      description: "Belediyeler, özel kuruluşlar ve sivil toplum organizasyonları ile çeşitli teknoloji çözümleri geliştiriyoruz."
+    }
+  ];
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -65,65 +82,10 @@ const References = () => {
           {/* Partners Section */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              İş Ortaklarımız
+              İş Ortaklarımız ve Referanslarımız
             </h2>
             
-            {/* University and Academic Partners */}
-            <Card className="card-gradient border-border/50 mb-8 glow-on-hover">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <Building2 className="h-5 w-5 text-primary" />
-                  Üniversite & Akademik Kurumlar
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-white rounded-lg p-8 mb-6">
-                  <img 
-                    src="/lovable-uploads/f0bf5316-e75c-41f1-9aa3-0b5b1ce6b1c7.png" 
-                    alt="University and Academic Partners" 
-                    className="w-full h-auto max-h-32 object-contain"
-                  />
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">Gaziantep Üniversitesi</Badge>
-                  <Badge variant="secondary">Gaziantep Sanayi Odası</Badge>
-                  <Badge variant="secondary">TİTAN</Badge>
-                  <Badge variant="secondary">SMQT</Badge>
-                  <Badge variant="secondary">Çankırı Karatekin Üniversitesi</Badge>
-                </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Akademik kurumlarla işbirliği yaparak eğitim ve araştırma projelerinde teknoloji altyapısı desteği sağlıyoruz.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Government and Public Institutions */}
-            <Card className="card-gradient border-border/50 glow-on-hover">
-              <CardHeader>
-                <CardTitle className="text-xl font-semibold text-foreground mb-4 flex items-center gap-2">
-                  <Award className="h-5 w-5 text-primary" />
-                  Kamu Kurumları & Uluslararası Organizasyonlar
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-white rounded-lg p-8 mb-6">
-                  <img 
-                    src="/lovable-uploads/95d53cb6-8d9c-4673-bb14-e44a0abde0e0.png" 
-                    alt="Government and International Organization Partners" 
-                    className="w-full h-auto max-h-32 object-contain"
-                  />
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">T.C. Aile ve Sosyal Politikalar Bakanlığı</Badge>
-                  <Badge variant="secondary">T.C. Orman ve Su İşleri Bakanlığı</Badge>
-                  <Badge variant="secondary">Türk Hava Kuvvetleri</Badge>
-                  <Badge variant="secondary">World Health Organization</Badge>
-                </div>
-                <p className="text-sm text-muted-foreground mt-4">
-                  Kamu kurumları ve uluslararası organizasyonlarla stratejik ortaklıklar kurarak büyük ölçekli projeler gerçekleştiriyoruz.
-                </p>
-              </CardContent>
-            </Card>
+            <ReferencesSlider slides={referenceSlides} />
           </div>
 
           {/* Sectors We Serve */}
