@@ -61,7 +61,7 @@ export function CompanyStats() {
           
           <div className="relative rounded-2xl overflow-hidden group">
             <img 
-              src={officeBuildingImage} 
+              src="/lovable-uploads/5575d8e0-31f3-488b-86f5-5fb8d10605fc.png" 
               alt="2C teknoloji merkez ofisi" 
               className="w-full h-64 object-cover transition-transform group-hover:scale-105"
             />
