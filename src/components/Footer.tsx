@@ -24,8 +24,12 @@ export function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xl">2C</span>
+              <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+                <img 
+                  src="/lovable-uploads/fb7c8c69-cc83-4677-af16-5bcc61d5920b.png" 
+                  alt="2C Teknoloji Logo" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <span className="text-xl font-bold text-foreground">Teknoloji</span>
             </div>
