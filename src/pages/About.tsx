@@ -141,6 +141,26 @@ const About = () => {
                 </p>
               </div>
             </div>
+
+            {/* Academy-University Partnership Section */}
+            <div className="mt-16">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl font-bold text-foreground mb-6">Akademi-Üniversite İş Birliği</h2>
+                <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+                  Türkiye'nin önde gelen üniversiteleri ve araştırma kurumları ile stratejik iş birlikleri gerçekleştiriyoruz.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-card rounded-2xl p-8 border border-border/50 hover:shadow-lg transition-all">
+                <div className="max-w-4xl mx-auto">
+                  <img 
+                    src="/lovable-uploads/1de01bad-b817-4cfc-a93c-f7e8b5ebf769.png" 
+                    alt="Akademi-Üniversite İş Birliği - ODTÜ, İTÜ, Galatasaray Üniversitesi, TOBB ETÜ, Atılım Üniversitesi, Antalya Üniversitesi" 
+                    className="w-full h-auto rounded-xl shadow-md"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>
