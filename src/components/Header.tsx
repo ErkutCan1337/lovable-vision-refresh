@@ -5,19 +5,34 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { LanguageSelector } from "@/components/LanguageSelector";
-const navigationKeys = [
-  { key: "nav.home", href: "/" },
-  { key: "nav.about", href: "/about" },
-  { key: "nav.services", href: "/services" },
-  { key: "nav.projects", href: "/projects" },
-  { key: "nav.careers", href: "/careers" },
-  { key: "nav.references", href: "/references" },
-  { key: "nav.contact", href: "/contact" }
-];
+const navigationKeys = [{
+  key: "nav.home",
+  href: "/"
+}, {
+  key: "nav.about",
+  href: "/about"
+}, {
+  key: "nav.services",
+  href: "/services"
+}, {
+  key: "nav.projects",
+  href: "/projects"
+}, {
+  key: "nav.careers",
+  href: "/careers"
+}, {
+  key: "nav.references",
+  href: "/references"
+}, {
+  key: "nav.contact",
+  href: "/contact"
+}];
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   return <header className="bg-background/80 backdrop-blur-md border-b border-border/50 sticky top-0 z-50">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
         {/* Logo */}
@@ -42,7 +57,7 @@ export function Header() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
           <LanguageSelector />
           <Button variant="hero" asChild>
-            <Link to="/contact">{t("nav.contact")}</Link>
+            
           </Button>
         </div>
 
