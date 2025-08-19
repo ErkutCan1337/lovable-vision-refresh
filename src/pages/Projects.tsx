@@ -4,83 +4,86 @@ import { ImageCarousel } from "@/components/ImageCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Monitor, ShoppingCart, Shield, Truck, CreditCard } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import projectManagementImage from "@/assets/project-management.jpg";
 import projectDashboardImage from "@/assets/project-dashboard.jpg";
 import modernDatacenterImage from "@/assets/modern-datacenter.jpg";
 import networkInfrastructureImage from "@/assets/network-infrastructure.jpg";
 
-const projects = [
-  {
-    icon: MapPin,
-    title: "CBS Tabanlı Bilgi Sistemleri",
-    description: "Coğrafi Bilgi Sistemleri tabanlı entegre veri yönetim çözümleri",
-    category: "Coğrafi Bilgi Sistemleri",
-    status: "Tamamlandı",
-    technologies: ["GIS", "PostgreSQL", "Web Teknolojileri"]
-  },
-  {
-    icon: ShoppingCart,
-    title: "Talep Tabanlı E-Ticaret Portalı", 
-    description: "Dinamik talep yönetimi özellikli modern e-ticaret platformu",
-    category: "E-Ticaret",
-    status: "Aktif",
-    technologies: ["React", "Node.js", "MongoDB"]
-  },
-  {
-    icon: Shield,
-    title: "CCTV ve Güvenlik Yönetim Projeleri",
-    description: "Entegre güvenlik kamera sistemleri ve merkezi yönetim çözümleri",
-    category: "Güvenlik Sistemleri",
-    status: "Tamamlandı", 
-    technologies: ["IP Cameras", "Analytics", "Mobile Apps"]
-  },
-  {
-    icon: Truck,
-    title: "Terminal (Otogar) Yönetim Projesi",
-    description: "Otogar operasyonlarının dijital yönetimi için kapsamlı sistem",
-    category: "Ulaşım Yönetimi",
-    status: "Geliştirme Aşamasında",
-    technologies: ["Java", "Spring Boot", "PostgreSQL"]
-  },
-  {
-    icon: CreditCard,
-    title: "HGS Entegrasyon Sistemleri",
-    description: "Hızlı Geçiş Sistemi entegrasyonu ve ödeme altyapısı",
-    category: "Ödeme Sistemleri", 
-    status: "Tamamlandı",
-    technologies: ["REST API", "Payment Gateway", "Security"]
-  },
-  {
-    icon: Monitor,
-    title: "Kurumsal Altyapı Modernizasyonu",
-    description: "Büyük ölçekli kurumsal IT altyapısının yenilenmesi ve optimizasyonu", 
-    category: "Altyapı",
-    status: "Devam Ediyor",
-    technologies: ["VMware", "Storage", "Network Security"]
-  }
-];
-
 const Projects = () => {
+  const { t } = useLanguage();
+
+  const projects = [
+    {
+      icon: MapPin,
+      titleKey: "projects.gis.title",
+      descriptionKey: "projects.gis.description",
+      categoryKey: "projects.gis.category",
+      statusKey: "projects.status.completed",
+      technologies: ["GIS", "PostgreSQL", "Web Teknolojileri"]
+    },
+    {
+      icon: ShoppingCart,
+      titleKey: "projects.ecommerce.title",
+      descriptionKey: "projects.ecommerce.description",
+      categoryKey: "projects.ecommerce.category",
+      statusKey: "projects.status.active",
+      technologies: ["React", "Node.js", "MongoDB"]
+    },
+    {
+      icon: Shield,
+      titleKey: "projects.cctv.title",
+      descriptionKey: "projects.cctv.description",
+      categoryKey: "projects.cctv.category",
+      statusKey: "projects.status.completed",
+      technologies: ["IP Cameras", "Analytics", "Mobile Apps"]
+    },
+    {
+      icon: Truck,
+      titleKey: "projects.terminal.title",
+      descriptionKey: "projects.terminal.description",
+      categoryKey: "projects.terminal.category",
+      statusKey: "projects.status.development",
+      technologies: ["Java", "Spring Boot", "PostgreSQL"]
+    },
+    {
+      icon: CreditCard,
+      titleKey: "projects.hgs.title",
+      descriptionKey: "projects.hgs.description",
+      categoryKey: "projects.hgs.category",
+      statusKey: "projects.status.completed",
+      technologies: ["REST API", "Payment Gateway", "Security"]
+    },
+    {
+      icon: Monitor,
+      titleKey: "projects.infrastructure.title",
+      descriptionKey: "projects.infrastructure.description",
+      categoryKey: "projects.infrastructure.category",
+      statusKey: "projects.status.ongoing",
+      technologies: ["VMware", "Storage", "Network Security"]
+    }
+  ];
+
   const carouselSlides = [
     {
       image: projectManagementImage,
-      title: "Proje Yönetimi",
-      description: "Profesyonel proje yönetimi ile başarılı çözümler"
+      title: t("projects.carousel.management.title"),
+      description: t("projects.carousel.management.description")
     },
     {
       image: projectDashboardImage,
-      title: "Analitik Dashboard",
-      description: "Modern veri görselleştirme ve analiz sistemleri"
+      title: t("projects.carousel.dashboard.title"),
+      description: t("projects.carousel.dashboard.description")
     },
     {
       image: modernDatacenterImage,
-      title: "Altyapı Projeleri",
-      description: "Kurumsal IT altyapısı ve veri merkezi çözümleri"
+      title: t("projects.carousel.infrastructure.title"),
+      description: t("projects.carousel.infrastructure.description")
     },
     {
       image: networkInfrastructureImage,
-      title: "Ağ Altyapısı",
-      description: "Güvenli ve ölçeklenebilir ağ mimarisi kurulumu"
+      title: t("projects.carousel.network.title"),
+      description: t("projects.carousel.network.description")
     }
   ];
 
@@ -92,11 +95,10 @@ const Projects = () => {
           {/* Hero Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
-              Projelerimiz
+              {t("projects.title")}
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12 slide-up">
-              Çeşitli sektörlerde gerçekleştirdiğimiz başarılı projeler ve çözümlerimiz. 
-              Her proje, müşteri ihtiyaçlarına özel geliştirilmiş teknoloji çözümleridir.
+              {t("projects.subtitle")}
             </p>
           </div>
 
@@ -110,7 +112,7 @@ const Projects = () => {
             {projects.map((project, index) => {
               const Icon = project.icon;
               return (
-                <Card key={project.title} className="card-gradient border-border/50 glow-on-hover">
+                <Card key={project.titleKey} className="card-gradient border-border/50 glow-on-hover">
                   <CardHeader>
                     <div className="flex items-start space-x-3 mb-3">
                       <div className="flex-shrink-0">
@@ -121,30 +123,30 @@ const Projects = () => {
                       <div className="flex-1">
                         <div className="flex items-start justify-between mb-2">
                           <CardTitle className="text-lg font-semibold text-foreground leading-tight">
-                            {project.title}
+                            {t(project.titleKey)}
                           </CardTitle>
                         </div>
                         <Badge 
-                          variant={project.status === 'Tamamlandı' ? 'default' : project.status === 'Aktif' ? 'secondary' : 'outline'}
+                          variant={t(project.statusKey) === t('projects.status.completed') ? 'default' : t(project.statusKey) === t('projects.status.active') ? 'secondary' : 'outline'}
                           className="mb-2"
                         >
-                          {project.status}
+                          {t(project.statusKey)}
                         </Badge>
                       </div>
                     </div>
                     <CardDescription className="text-muted-foreground text-base leading-relaxed">
-                      {project.description}
+                      {t(project.descriptionKey)}
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-4">
                       <div>
-                        <h4 className="text-sm font-medium text-foreground mb-2">Kategori</h4>
-                        <p className="text-foreground">{project.category}</p>
+                        <h4 className="text-sm font-medium text-foreground mb-2">{t("projects.category")}</h4>
+                        <p className="text-foreground">{t(project.categoryKey)}</p>
                       </div>
                       
                       <div>
-                        <h4 className="text-sm font-medium text-foreground mb-2">Teknolojiler</h4>
+                        <h4 className="text-sm font-medium text-foreground mb-2">{t("projects.technologies")}</h4>
                         <div className="flex flex-wrap gap-1">
                           {project.technologies.map((tech, idx) => (
                             <Badge key={idx} variant="outline" className="text-xs">

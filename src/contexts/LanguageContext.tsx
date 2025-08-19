@@ -51,8 +51,44 @@ const translations = {
     
     // Projects
     'projects.title': 'Projelerimiz',
-    'projects.subtitle': 'Başarıyla tamamladığımız projelerde teknoloji ve inovasyonu bir araya getiriyoruz',
+    'projects.subtitle': 'Çeşitli sektörlerde gerçekleştirdiğimiz başarılı projeler ve çözümlerimiz. Her proje, müşteri ihtiyaçlarına özel geliştirilmiş teknoloji çözümleridir.',
     'projects.view_details': 'Detayları Görüntüle',
+    'projects.category': 'Kategori',
+    'projects.technologies': 'Teknolojiler',
+    'projects.status.completed': 'Tamamlandı',
+    'projects.status.active': 'Aktif', 
+    'projects.status.development': 'Geliştirme Aşamasında',
+    'projects.status.ongoing': 'Devam Ediyor',
+    
+    // Project carousel
+    'projects.carousel.management.title': 'Proje Yönetimi',
+    'projects.carousel.management.description': 'Profesyonel proje yönetimi ile başarılı çözümler',
+    'projects.carousel.dashboard.title': 'Analitik Dashboard',
+    'projects.carousel.dashboard.description': 'Modern veri görselleştirme ve analiz sistemleri',
+    'projects.carousel.infrastructure.title': 'Altyapı Projeleri',
+    'projects.carousel.infrastructure.description': 'Kurumsal IT altyapısı ve veri merkezi çözümleri',
+    'projects.carousel.network.title': 'Ağ Altyapısı',
+    'projects.carousel.network.description': 'Güvenli ve ölçeklenebilir ağ mimarisi kurulumu',
+    
+    // Individual projects
+    'projects.gis.title': 'CBS Tabanlı Bilgi Sistemleri',
+    'projects.gis.description': 'Coğrafi Bilgi Sistemleri tabanlı entegre veri yönetim çözümleri',
+    'projects.gis.category': 'Coğrafi Bilgi Sistemleri',
+    'projects.ecommerce.title': 'Talep Tabanlı E-Ticaret Portalı',
+    'projects.ecommerce.description': 'Dinamik talep yönetimi özellikli modern e-ticaret platformu',  
+    'projects.ecommerce.category': 'E-Ticaret',
+    'projects.cctv.title': 'CCTV ve Güvenlik Yönetim Projeleri',
+    'projects.cctv.description': 'Entegre güvenlik kamera sistemleri ve merkezi yönetim çözümleri',
+    'projects.cctv.category': 'Güvenlik Sistemleri',
+    'projects.terminal.title': 'Terminal (Otogar) Yönetim Projesi',
+    'projects.terminal.description': 'Otogar operasyonlarının dijital yönetimi için kapsamlı sistem',
+    'projects.terminal.category': 'Ulaşım Yönetimi',
+    'projects.hgs.title': 'HGS Entegrasyon Sistemleri',
+    'projects.hgs.description': 'Hızlı Geçiş Sistemi entegrasyonu ve ödeme altyapısı',
+    'projects.hgs.category': 'Ödeme Sistemleri',
+    'projects.infrastructure.title': 'Kurumsal Altyapı Modernizasyonu',
+    'projects.infrastructure.description': 'Büyük ölçekli kurumsal IT altyapısının yenilenmesi ve optimizasyonu',
+    'projects.infrastructure.category': 'Altyapı',
     
     // References
     'references.title': 'Referanslarımız',
@@ -182,8 +218,44 @@ const translations = {
     
     // Projects
     'projects.title': 'Our Projects',
-    'projects.subtitle': 'In our successfully completed projects, we bring technology and innovation together',
+    'projects.subtitle': 'Our successful projects and solutions in various sectors. Each project is a technology solution specially developed for customer needs.',
     'projects.view_details': 'View Details',
+    'projects.category': 'Category',
+    'projects.technologies': 'Technologies',
+    'projects.status.completed': 'Completed',
+    'projects.status.active': 'Active',
+    'projects.status.development': 'In Development',
+    'projects.status.ongoing': 'Ongoing',
+    
+    // Project carousel
+    'projects.carousel.management.title': 'Project Management',
+    'projects.carousel.management.description': 'Successful solutions with professional project management',
+    'projects.carousel.dashboard.title': 'Analytics Dashboard',
+    'projects.carousel.dashboard.description': 'Modern data visualization and analysis systems',
+    'projects.carousel.infrastructure.title': 'Infrastructure Projects',
+    'projects.carousel.infrastructure.description': 'Corporate IT infrastructure and data center solutions',
+    'projects.carousel.network.title': 'Network Infrastructure',
+    'projects.carousel.network.description': 'Secure and scalable network architecture setup',
+    
+    // Individual projects
+    'projects.gis.title': 'GIS-Based Information Systems',
+    'projects.gis.description': 'Geographic Information Systems based integrated data management solutions',
+    'projects.gis.category': 'Geographic Information Systems',
+    'projects.ecommerce.title': 'Demand-Based E-Commerce Portal',
+    'projects.ecommerce.description': 'Modern e-commerce platform with dynamic demand management features',
+    'projects.ecommerce.category': 'E-Commerce',
+    'projects.cctv.title': 'CCTV and Security Management Projects',
+    'projects.cctv.description': 'Integrated security camera systems and central management solutions',
+    'projects.cctv.category': 'Security Systems',
+    'projects.terminal.title': 'Terminal (Bus Station) Management Project',
+    'projects.terminal.description': 'Comprehensive system for digital management of bus terminal operations',
+    'projects.terminal.category': 'Transportation Management',
+    'projects.hgs.title': 'HGS Integration Systems',
+    'projects.hgs.description': 'Fast Transit System integration and payment infrastructure',
+    'projects.hgs.category': 'Payment Systems',
+    'projects.infrastructure.title': 'Corporate Infrastructure Modernization',
+    'projects.infrastructure.description': 'Renewal and optimization of large-scale corporate IT infrastructure',
+    'projects.infrastructure.category': 'Infrastructure',
     
     // References
     'references.title': 'Our References',
