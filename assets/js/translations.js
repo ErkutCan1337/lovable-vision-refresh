@@ -189,10 +189,13 @@ function updatePageContent() {
     const key = element.getAttribute('data-key');
     const translatedText = t(key);
     
+    // Only update text if a translation exists; otherwise keep original content
+    const hasTranslation = translatedText !== key;
+
     if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-      element.placeholder = translatedText;
+      if (hasTranslation) element.placeholder = translatedText;
     } else {
-      element.textContent = translatedText;
+      if (hasTranslation) element.textContent = translatedText;
     }
   });
 }
