@@ -110,24 +110,24 @@ const References = () => {
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-br from-slate-900 to-slate-800 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-primary-foreground mb-4">
+          <div className="text-center bg-background rounded-2xl p-12">
+            <h2 className="text-3xl font-bold text-white mb-4">
               Bizimle Çalışmak İster misiniz?
             </h2>
-            <p className="text-lg text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
               Teknoloji projelerinizde güvenilir iş ortağı arıyorsanız, uzman ekibimizle 
               size özel çözümler geliştirebiliriz.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="/contact" 
-                className="inline-flex items-center justify-center rounded-lg bg-white text-primary px-8 py-3 text-sm font-semibold shadow-sm hover:bg-white/90 transition-colors"
+                className="inline-flex items-center justify-center rounded-lg bg-primary text-primary-foreground px-8 py-3 text-sm font-semibold shadow-sm hover:bg-primary/90 transition-colors"
               >
                 İrtibata Geçin
               </a>
               <a 
                 href="/services" 
-                className="inline-flex items-center justify-center rounded-lg border border-white/20 text-primary-foreground px-8 py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
+                className="inline-flex items-center justify-center rounded-lg border border-white/20 text-white px-8 py-3 text-sm font-semibold hover:bg-white/10 transition-colors"
               >
                 Hizmetlerimizi İnceleyin
               </a>
