@@ -52,7 +52,26 @@ const translations = {
     // Products and Solutions
     'services.products.title': 'Ürün ve Çözümlerimiz',
     'services.products.subtitle': 'İşletmenizin dijital dönüşümü için kapsamlı yazılım çözümleri',
-    'services.integration.subtitle': 'Altyapı kurulumu ve sistem entegrasyonu alanında profesyonel hizmetler',
+'services.integration.subtitle': 'Altyapı kurulumu ve sistem entegrasyonu alanında profesyonel hizmetler',
+    // Services features
+    'services.features.infrastructure_design': 'Altyapı tasarımı',
+    'services.features.system_integration': 'Sistem entegrasyonu',
+    'services.features.performance_optimization': 'Performans optimizasyonu',
+    'services.features.data_center_design': 'Veri merkezi tasarımı',
+    'services.features.infrastructure_setup': 'Altyapı kurulumu',
+    'services.features.monitoring_24_7': '7/24 izleme',
+    'services.features.hpc_cluster_setup': 'HPC cluster kurulumu',
+    'services.features.performance_analysis': 'Performans analizi',
+    'services.features.scalable_solutions': 'Ölçeklenebilir çözümler',
+    'services.features.security_analysis': 'Güvenlik analizi',
+    'services.features.protection_systems': 'Koruma sistemleri',
+    'services.features.risk_management': 'Risk yönetimi',
+    'services.features.vm_infrastructure': 'VM altyapısı',
+    'services.features.resource_optimization': 'Kaynak optimizasyonu',
+    'services.features.central_management': 'Merkezi yönetim',
+    'services.features.backup_strategy': 'Yedekleme stratejisi',
+    'services.features.recovery_plans': 'Kurtarma planları',
+    'services.features.business_continuity': 'İş sürekliliği',
     
     // Individual Products
     'products.info_management.title': 'Bilgi Yönetim Sistemi',
@@ -354,6 +373,12 @@ const translations = {
     'stats.clients': 'Mutlu Müşteri',
     'stats.experience': 'Yıllık Deneyim',
     'stats.team': 'Uzman Kadro',
+    // Home stats section
+    'home.stats.subtitle': 'Yılların getirdiği deneyim ve müşteri memnuniyeti odaklı yaklaşımımızın sonuçları',
+    'home.stats.team.title': 'Uzman Ekibimiz',
+    'home.stats.team.description': 'Deneyimli teknisyenler ve mühendislerden oluşan güçlü kadromuz',
+    'home.stats.facility.title': 'Modern Tesis',
+    'home.stats.facility.description': 'Ankara merkezli teknoloji üssümüzden hizmet veriyoruz',
   },
   en: {
     // Navigation
@@ -396,7 +421,26 @@ const translations = {
     // Products and Solutions
     'services.products.title': 'Our Products and Solutions',
     'services.products.subtitle': 'Comprehensive software solutions for your business digital transformation',
-    'services.integration.subtitle': 'Professional services in infrastructure setup and system integration',
+'services.integration.subtitle': 'Professional services in infrastructure setup and system integration',
+    // Services features
+    'services.features.infrastructure_design': 'Infrastructure design',
+    'services.features.system_integration': 'System integration',
+    'services.features.performance_optimization': 'Performance optimization',
+    'services.features.data_center_design': 'Data center design',
+    'services.features.infrastructure_setup': 'Infrastructure setup',
+    'services.features.monitoring_24_7': '24/7 monitoring',
+    'services.features.hpc_cluster_setup': 'HPC cluster setup',
+    'services.features.performance_analysis': 'Performance analysis',
+    'services.features.scalable_solutions': 'Scalable solutions',
+    'services.features.security_analysis': 'Security analysis',
+    'services.features.protection_systems': 'Protection systems',
+    'services.features.risk_management': 'Risk management',
+    'services.features.vm_infrastructure': 'VM infrastructure',
+    'services.features.resource_optimization': 'Resource optimization',
+    'services.features.central_management': 'Centralized management',
+    'services.features.backup_strategy': 'Backup strategy',
+    'services.features.recovery_plans': 'Recovery plans',
+    'services.features.business_continuity': 'Business continuity',
     
     // Individual Products
     'products.info_management.title': 'Information Management System',
@@ -698,6 +742,12 @@ const translations = {
     'stats.clients': 'Happy Clients',
     'stats.experience': 'Years Experience',
     'stats.team': 'Expert Team',
+    // Home stats section
+    'home.stats.subtitle': 'The results of our years of experience and customer-focused approach',
+    'home.stats.team.title': 'Our Expert Team',
+    'home.stats.team.description': 'Our strong team of experienced technicians and engineers',
+    'home.stats.facility.title': 'Modern Facility',
+    'home.stats.facility.description': 'We serve from our Ankara-based technology hub',
   }
 };
 
