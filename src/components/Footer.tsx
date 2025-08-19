@@ -1,34 +1,22 @@
 import { Link } from "react-router-dom";
 import { Building2, Mail, Phone, MapPin } from "lucide-react";
-const navigation = {
-  company: [{
-    name: "Hakkımızda",
-    href: "/about"
-  }, {
-    name: "Kariyer",
-    href: "/careers"
-  }, {
-    name: "Projeler",
-    href: "/projects"
-  }, {
-    name: "İletişim",
-    href: "/contact"
-  }],
-  services: [{
-    name: "Sistem Entegrasyon",
-    href: "/services"
-  }, {
-    name: "Veri Merkezi",
-    href: "/services"
-  }, {
-    name: "Bilişim Güvenliği",
-    href: "/services"
-  }, {
-    name: "Sanallaştırma",
-    href: "/services"
-  }]
+import { useLanguage } from "@/contexts/LanguageContext";
+const navigationKeys = {
+  company: [
+    { key: "nav.about", href: "/about" },
+    { key: "nav.careers", href: "/careers" },
+    { key: "nav.projects", href: "/projects" },
+    { key: "nav.contact", href: "/contact" }
+  ],
+  services: [
+    { key: "services.system_integration.title", href: "/services" },
+    { key: "services.data_center.title", href: "/services" },
+    { key: "services.security.title", href: "/services" },
+    { key: "services.virtualization.title", href: "/services" }
+  ]
 };
 export function Footer() {
+  const { t } = useLanguage();
   return <footer className="bg-card border-t border-border">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-4">
@@ -41,8 +29,7 @@ export function Footer() {
               
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Teknoloji alanında uzman kadromuz ile müşterilerimize entegre çözümler sunarak, 
-              platform bağımsız bir şekilde hizmet vermekteyiz.
+              {t("footer.company_info")}
             </p>
             
             {/* Contact Info */}
@@ -60,11 +47,11 @@ export function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">Şirket</h3>
+            <h3 className="text-sm font-semibold text-foreground mb-4">{t("footer.quick_links")}</h3>
             <ul role="list" className="space-y-3">
-              {navigation.company.map(item => <li key={item.name}>
+              {navigationKeys.company.map(item => <li key={item.key}>
                   <Link to={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {item.name}
+                    {t(item.key)}
                   </Link>
                 </li>)}
             </ul>
@@ -72,11 +59,11 @@ export function Footer() {
 
           {/* Services Links */}
           <div>
-            <h3 className="text-sm font-semibold text-foreground mb-4">Hizmetler</h3>
+            <h3 className="text-sm font-semibold text-foreground mb-4">{t("nav.services")}</h3>
             <ul role="list" className="space-y-3">
-              {navigation.services.map(item => <li key={item.name}>
+              {navigationKeys.services.map(item => <li key={item.key}>
                   <Link to={item.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {item.name}
+                    {t(item.key)}
                   </Link>
                 </li>)}
             </ul>
@@ -87,7 +74,7 @@ export function Footer() {
         <div className="mt-12 border-t border-border pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-sm text-muted-foreground">
-              © 2024 2C Teknoloji. Tüm hakları saklıdır.
+              © 2024 2C Teknoloji. {t("footer.all_rights_reserved")}
             </p>
             <p className="text-sm text-muted-foreground mt-4 md:mt-0">
               Yerli teknoloji üreticisi, rekabet edilebilir çözümler

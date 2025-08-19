@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { ImageCarousel } from "@/components/ImageCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   Server, Shield, Cloud, HardDrive, Network, AlertTriangle, 
   Database, FileText, Globe, Map, Monitor, BarChart3, 
@@ -181,26 +182,28 @@ const systemIntegrationServices = [
 ];
 
 const Services = () => {
+  const { t } = useLanguage();
+  
   const carouselSlides = [
     {
       image: modernDatacenterImage,
-      title: "Modern Veri Merkezi",
-      description: "Güvenli ve ölçeklenebilir veri merkezi altyapı çözümleri"
+      titleKey: "services.data_center.title",
+      descriptionKey: "services.data_center.description"
     },
     {
       image: supercomputerImage,
-      title: "HPC Çözümleri",
-      description: "Yüksek performanslı hesaplama ve süper bilgisayar teknolojileri"
+      titleKey: "services.hpc.title", 
+      descriptionKey: "services.hpc.description"
     },
     {
       image: networkInfrastructureImage,
-      title: "Ağ Altyapısı",
-      description: "Profesyonel ağ kurulumu ve yönetim hizmetleri"
+      titleKey: "services.system_integration.title",
+      descriptionKey: "services.system_integration.description"
     },
     {
       image: softwareDevelopmentImage,
-      title: "Yazılım Geliştirme",
-      description: "Özel yazılım çözümleri ve sistem entegrasyonu"
+      titleKey: "services.virtualization.title",
+      descriptionKey: "services.virtualization.description"
     }
   ];
 
@@ -212,17 +215,20 @@ const Services = () => {
           {/* Header Section */}
           <div className="text-center mb-16">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6 fade-in">
-              Ürün & Hizmetlerimiz
+              {t("services.title")}
             </h1>
             <p className="text-lg leading-8 text-muted-foreground max-w-3xl mx-auto mb-12 slide-up">
-              Teknoloji alanında uzman kadromuz ile kapsamlı çözümler sunuyoruz. 
-              Her ihtiyaca özel entegre sistemler geliştiriyoruz.
+              {t("services.subtitle")}
             </p>
           </div>
 
           {/* Services Carousel */}
           <div className="mb-16">
-            <ImageCarousel slides={carouselSlides} className="max-w-5xl mx-auto" />
+            <ImageCarousel slides={carouselSlides.map(slide => ({
+              image: slide.image,
+              title: t(slide.titleKey),
+              description: t(slide.descriptionKey)
+            }))} className="max-w-5xl mx-auto" />
           </div>
 
           {/* Products and Solutions Section */}
@@ -261,7 +267,7 @@ const Services = () => {
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
-                Sistem Entegrasyon Hizmetleri
+                {t("services.system_integration.title")}
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Altyapı kurulumu ve sistem entegrasyonu alanında profesyonel hizmetler

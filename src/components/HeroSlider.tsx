@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Shield, Cpu, Database, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import heroDatacenter from "@/assets/hero-datacenter.jpg";
@@ -9,6 +10,7 @@ import heroHpc from "@/assets/hero-hpc.jpg";
 import heroSecurity from "@/assets/hero-security.jpg";
 
 export function HeroSlider() {
+  const { t } = useLanguage();
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollY, setScrollY] = useState(0);
   
@@ -58,23 +60,23 @@ export function HeroSlider() {
   const slides = [
     {
       image: heroDatacenter,
-      title: "İleri Teknoloji Çözümleri",
-      description: "Yeni nesil altyapı teknolojileri ile geleceği inşa ediyoruz",
-      cta: "Keşfedin",
+      titleKey: "home.hero.title",
+      descriptionKey: "home.hero.subtitle",
+      ctaKey: "home.hero.cta",
       link: "/services"
     },
     {
       image: heroHpc,
-      title: "Yüksek Standartlarda Hizmet",
-      description: "Hizmette sınır tanımıyoruz",
-      cta: "Keşfedin",
+      titleKey: "services.hpc.title",
+      descriptionKey: "services.hpc.description",
+      ctaKey: "home.hero.cta",
       link: "/services"
     },
     {
       image: heroSecurity,
-      title: "Arge Ürünleri",
-      description: "Gelişmiş Arge Ürünleri",
-      cta: "Keşfedin",
+      titleKey: "services.security.title",
+      descriptionKey: "services.security.description",
+      ctaKey: "home.hero.cta",
       link: "/services"
     }
   ];
@@ -106,10 +108,10 @@ export function HeroSlider() {
                   {/* Glassmorphism Card */}
                   <div className="backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl p-12 md:p-16 shadow-2xl">
                     <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6 tracking-tight leading-tight animate-fade-in">
-                      {slide.title}
+                      {t(slide.titleKey)}
                     </h1>
                     <p className="text-xl md:text-2xl text-white/90 mb-12 font-light leading-relaxed animate-fade-in" style={{ animationDelay: '0.2s' }}>
-                      {slide.description}
+                      {t(slide.descriptionKey)}
                     </p>
                     <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
                       <Button 
@@ -118,7 +120,7 @@ export function HeroSlider() {
                         asChild
                       >
                         <Link to={slide.link} className="flex items-center gap-3">
-                          {slide.cta}
+                          {t(slide.ctaKey)}
                           <ArrowRight className="h-5 w-5" />
                         </Link>
                       </Button>

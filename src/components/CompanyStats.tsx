@@ -1,42 +1,44 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Users, Clock, Award } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 import teamWorkingImage from "@/assets/team-working.jpg";
 import officeBuildingImage from "@/assets/office-building.jpg";
 
-const stats = [
-  {
-    icon: Building2,
-    value: "200+",
-    label: "Tamamlanan Proje",
-    description: "Başarıyla teslim edilen teknoloji projeleri"
-  },
-  {
-    icon: Users,
-    value: "15+",
-    label: "Yıllık Deneyim",
-    description: "Sektörde biriken uzman tecrübe"
-  },
-  {
-    icon: Award,
-    value: "50+",
-    label: "Mutlu Müşteri",
-    description: "Güvenli çözümlerle kazanılan güven"
-  },
-  {
-    icon: Clock,
-    value: "24/7",
-    label: "Teknik Destek",
-    description: "Kesintisiz hizmet garantisi"
-  }
-];
-
 export function CompanyStats() {
+  const { t } = useLanguage();
+  
+  const stats = [
+    {
+      icon: Building2,
+      value: "200+",
+      labelKey: "stats.projects",
+      descriptionKey: "about.success_stories.projects"
+    },
+    {
+      icon: Users,
+      value: "15+",
+      labelKey: "stats.experience",
+      descriptionKey: "about.why2c.experience"
+    },
+    {
+      icon: Award,
+      value: "50+",
+      labelKey: "stats.clients",
+      descriptionKey: "about.success_stories.customers"
+    },
+    {
+      icon: Clock,
+      value: "24/7",
+      labelKey: "stats.team",
+      descriptionKey: "careers.team.description"
+    }
+  ];
   return (
     <section className="py-24 bg-gradient-secondary">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-16">
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
-            Güçlü Rakamlarla 2C
+            {t("about.success_stories.title")} 2C
           </h2>
           <p className="text-lg leading-8 text-muted-foreground">
             Yılların getirdiği deneyim ve müşteri memnuniyeti odaklı yaklaşımımızın sonuçları
@@ -79,7 +81,7 @@ export function CompanyStats() {
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <Card key={stat.label} className="card-gradient border-border/50 hover:shadow-lg transition-all duration-300 glow-on-hover">
+              <Card key={stat.labelKey} className="card-gradient border-border/50 hover:shadow-lg transition-all duration-300 glow-on-hover">
                 <CardContent className="p-6 text-center">
                   <div className="mb-4">
                     <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto">
@@ -88,9 +90,9 @@ export function CompanyStats() {
                   </div>
                   <div className="mb-2">
                     <div className="text-3xl font-bold text-primary">{stat.value}</div>
-                    <div className="text-lg font-semibold text-foreground mt-1">{stat.label}</div>
+                    <div className="text-lg font-semibold text-foreground mt-1">{t(stat.labelKey)}</div>
                   </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{stat.description}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{t(stat.descriptionKey)}</p>
                 </CardContent>
               </Card>
             );
