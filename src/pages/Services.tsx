@@ -15,174 +15,174 @@ import supercomputerImage from "@/assets/supercomputer.jpg";
 import networkInfrastructureImage from "@/assets/network-infrastructure.jpg";
 import softwareDevelopmentImage from "@/assets/software-development.jpg";
 
-const products = [
-  {
-    icon: Database,
-    title: "Information Management System",
-    description: "Kapsamlı bilgi yönetimi ve organizasyon çözümleri"
-  },
-  {
-    icon: Shield,
-    title: "Security Management Systems", 
-    description: "Güvenlik yönetimi ve izleme sistemleri"
-  },
-  {
-    icon: FileText,
-    title: "Digital Archiving Systems",
-    description: "Dijital arşivleme ve dokümantasyon çözümleri"
-  },
-  {
-    icon: Globe,
-    title: "Web and Mobile Technology Solutions",
-    description: "Web ve mobil uygulama geliştirme hizmetleri"
-  },
-  {
-    icon: Map,
-    title: "GIS-Based Information Systems",
-    description: "Coğrafi bilgi sistemleri ve haritalama çözümleri"
-  },
-  {
-    icon: Monitor,
-    title: "Passenger Information Display Software",
-    description: "Yolcu bilgilendirme ve görüntüleme sistemleri"
-  },
-  {
-    icon: Monitor,
-    title: "Corporate Screen Management Software",
-    description: "Kurumsal ekran yönetimi ve içerik dağıtımı"
-  },
-  {
-    icon: BarChart3,
-    title: "Business Intelligence",
-    description: "İş zekası ve veri analizi çözümleri"
-  },
-  {
-    icon: Settings,
-    title: "Process Management Software",
-    description: "Süreç yönetimi ve optimizasyon yazılımları"
-  },
-  {
-    icon: Lock,
-    title: "Information Security and Cybersecurity Solutions",
-    description: "Bilgi güvenliği ve siber güvenlik çözümleri"
-  },
-  {
-    icon: ShoppingCart,
-    title: "Procurement and Asset Management",
-    description: "Satın alma ve varlık yönetimi sistemleri"
-  },
-  {
-    icon: Target,
-    title: "Internal Control Software",
-    description: "İç kontrol ve denetim yazılım çözümleri"
-  },
-  {
-    icon: Target,
-    title: "Strategic Planning Software",
-    description: "Stratejik planlama ve yönetim sistemleri"
-  },
-  {
-    icon: KeyRound,
-    title: "License Tracking Software",
-    description: "Lisans takip ve yönetim sistemleri"
-  },
-  {
-    icon: Users,
-    title: "Customer Tracking and Appointment System",
-    description: "Müşteri takip ve randevu yönetim sistemleri"
-  },
-  {
-    icon: Users,
-    title: "Personnel Tracking and HR Management Software",
-    description: "Personel takip ve insan kaynakları yönetimi"
-  },
-  {
-    icon: FolderOpen,
-    title: "Document Management System",
-    description: "Doküman yönetimi ve arşivleme çözümleri"
-  },
-  {
-    icon: Camera,
-    title: "Vehicle Counting and License Plate Recognition",
-    description: "Araç sayım ve plaka tanıma sistemleri"
-  },
-  {
-    icon: KeyRound,
-    title: "Access Control Systems Management Software",
-    description: "Erişim kontrol sistemleri yönetim yazılımı"
-  },
-  {
-    icon: BrainCircuit,
-    title: "Big Data Solutions",
-    description: "Büyük veri analizi ve işleme çözümleri"
-  }
-];
-
-const systemIntegrationServices = [
-  {
-    icon: Server,
-    title: "Server Solutions",
-    description: "Kurumsal sunucu çözümleri ve altyapı kurulumu"
-  },
-  {
-    icon: HardDrive,
-    title: "Data Storage Solutions", 
-    description: "Veri depolama ve yedekleme sistemleri"
-  },
-  {
-    icon: Layers,
-    title: "Server Virtualization Solutions",
-    description: "Sunucu sanallaştırma teknolojileri"
-  },
-  {
-    icon: Database,
-    title: "Data Storage Virtualization",
-    description: "Veri depolama sanallaştırma çözümleri"
-  },
-  {
-    icon: Cloud,
-    title: "Private Cloud Solutions",
-    description: "Özel bulut altyapısı ve yönetimi"
-  },
-  {
-    icon: Zap,
-    title: "System Automation Solutions",
-    description: "Sistem otomasyonu ve süreç yönetimi"
-  },
-  {
-    icon: Building2,
-    title: "Data Center Solutions",
-    description: "Veri merkezi tasarımı ve kurulumu"
-  },
-  {
-    icon: Cpu,
-    title: "Supercomputer Solutions (HPC)",
-    description: "Yüksek performanslı hesaplama sistemleri"
-  },
-  {
-    icon: Shield,
-    title: "IT Security Solutions",
-    description: "Bilişim teknolojileri güvenlik çözümleri"
-  },
-  {
-    icon: Network,
-    title: "Virtualization Solutions",
-    description: "Ağ ve sistem sanallaştırma teknolojileri"
-  },
-  {
-    icon: AlertTriangle,
-    title: "Disaster Recovery Solutions",
-    description: "Felaket kurtarma ve iş sürekliliği planları"
-  },
-  {
-    icon: BrainCircuit,
-    title: "Big Data Solutions",
-    description: "Büyük veri analizi ve işleme platformları"
-  }
-];
-
 const Services = () => {
   const { t } = useLanguage();
+  
+  const products = [
+    {
+      icon: Database,
+      titleKey: "products.info_management.title",
+      descriptionKey: "products.info_management.description"
+    },
+    {
+      icon: Shield,
+      titleKey: "products.security_management.title",
+      descriptionKey: "products.security_management.description"
+    },
+    {
+      icon: FileText,
+      titleKey: "products.digital_archiving.title",
+      descriptionKey: "products.digital_archiving.description"
+    },
+    {
+      icon: Globe,
+      titleKey: "products.web_mobile.title",
+      descriptionKey: "products.web_mobile.description"
+    },
+    {
+      icon: Map,
+      titleKey: "products.gis.title",
+      descriptionKey: "products.gis.description"
+    },
+    {
+      icon: Monitor,
+      titleKey: "products.passenger_info.title",
+      descriptionKey: "products.passenger_info.description"
+    },
+    {
+      icon: Monitor,
+      titleKey: "products.screen_management.title",
+      descriptionKey: "products.screen_management.description"
+    },
+    {
+      icon: BarChart3,
+      titleKey: "products.business_intelligence.title",
+      descriptionKey: "products.business_intelligence.description"
+    },
+    {
+      icon: Settings,
+      titleKey: "products.process_management.title",
+      descriptionKey: "products.process_management.description"
+    },
+    {
+      icon: Lock,
+      titleKey: "products.cybersecurity.title",
+      descriptionKey: "products.cybersecurity.description"
+    },
+    {
+      icon: ShoppingCart,
+      titleKey: "products.procurement.title",
+      descriptionKey: "products.procurement.description"
+    },
+    {
+      icon: Target,
+      titleKey: "products.internal_control.title",
+      descriptionKey: "products.internal_control.description"
+    },
+    {
+      icon: Target,
+      titleKey: "products.strategic_planning.title",
+      descriptionKey: "products.strategic_planning.description"
+    },
+    {
+      icon: KeyRound,
+      titleKey: "products.license_tracking.title",
+      descriptionKey: "products.license_tracking.description"
+    },
+    {
+      icon: Users,
+      titleKey: "products.customer_tracking.title",
+      descriptionKey: "products.customer_tracking.description"
+    },
+    {
+      icon: Users,
+      titleKey: "products.hr_management.title",
+      descriptionKey: "products.hr_management.description"
+    },
+    {
+      icon: FolderOpen,
+      titleKey: "products.document_management.title",
+      descriptionKey: "products.document_management.description"
+    },
+    {
+      icon: Camera,
+      titleKey: "products.vehicle_counting.title",
+      descriptionKey: "products.vehicle_counting.description"
+    },
+    {
+      icon: KeyRound,
+      titleKey: "products.access_control.title",
+      descriptionKey: "products.access_control.description"
+    },
+    {
+      icon: BrainCircuit,
+      titleKey: "products.big_data.title",
+      descriptionKey: "products.big_data.description"
+    }
+  ];
+
+  const systemIntegrationServices = [
+    {
+      icon: Server,
+      titleKey: "integration.server_solutions.title",
+      descriptionKey: "integration.server_solutions.description"
+    },
+    {
+      icon: HardDrive,
+      titleKey: "integration.data_storage.title",
+      descriptionKey: "integration.data_storage.description"
+    },
+    {
+      icon: Layers,
+      titleKey: "integration.server_virtualization.title",
+      descriptionKey: "integration.server_virtualization.description"
+    },
+    {
+      icon: Database,
+      titleKey: "integration.storage_virtualization.title",
+      descriptionKey: "integration.storage_virtualization.description"
+    },
+    {
+      icon: Cloud,
+      titleKey: "integration.private_cloud.title",
+      descriptionKey: "integration.private_cloud.description"
+    },
+    {
+      icon: Zap,
+      titleKey: "integration.system_automation.title",
+      descriptionKey: "integration.system_automation.description"
+    },
+    {
+      icon: Building2,
+      titleKey: "integration.data_center.title",
+      descriptionKey: "integration.data_center.description"
+    },
+    {
+      icon: Cpu,
+      titleKey: "integration.supercomputer.title",
+      descriptionKey: "integration.supercomputer.description"
+    },
+    {
+      icon: Shield,
+      titleKey: "integration.it_security.title",
+      descriptionKey: "integration.it_security.description"
+    },
+    {
+      icon: Network,
+      titleKey: "integration.virtualization.title",
+      descriptionKey: "integration.virtualization.description"
+    },
+    {
+      icon: AlertTriangle,
+      titleKey: "integration.disaster_recovery.title",
+      descriptionKey: "integration.disaster_recovery.description"
+    },
+    {
+      icon: BrainCircuit,
+      titleKey: "integration.big_data.title",
+      descriptionKey: "integration.big_data.description"
+    }
+  ];
   
   const carouselSlides = [
     {
@@ -235,26 +235,26 @@ const Services = () => {
           <div className="mb-20">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-4">
-                Ürün ve Çözümlerimiz
+                {t("services.products.title")}
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                İşletmenizin dijital dönüşümü için kapsamlı yazılım çözümleri
+                {t("services.products.subtitle")}
               </p>
             </div>
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {products.map((product, index) => {
                 const Icon = product.icon;
                 return (
-                  <Card key={product.title} className="card-gradient border-border/50 glow-on-hover h-full">
+                  <Card key={product.titleKey} className="card-gradient border-border/50 glow-on-hover h-full">
                     <CardHeader className="text-center pb-2">
                       <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mx-auto mb-4">
                         <Icon className="h-6 w-6 text-primary-foreground" />
                       </div>
                       <CardTitle className="text-lg font-semibold text-foreground leading-tight mb-2">
-                        {product.title}
+                        {t(product.titleKey)}
                       </CardTitle>
                       <CardDescription className="text-muted-foreground text-sm leading-relaxed">
-                        {product.description}
+                        {t(product.descriptionKey)}
                       </CardDescription>
                     </CardHeader>
                   </Card>
@@ -270,14 +270,14 @@ const Services = () => {
                 {t("services.system_integration.title")}
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Altyapı kurulumu ve sistem entegrasyonu alanında profesyonel hizmetler
+                {t("services.integration.subtitle")}
               </p>
             </div>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {systemIntegrationServices.map((service, index) => {
                 const Icon = service.icon;
                 return (
-                  <Card key={service.title} className="card-gradient border-border/50 glow-on-hover h-full">
+                  <Card key={service.titleKey} className="card-gradient border-border/50 glow-on-hover h-full">
                     <CardHeader>
                       <div className="flex items-start space-x-4">
                         <div className="flex-shrink-0">
@@ -287,10 +287,10 @@ const Services = () => {
                         </div>
                         <div className="flex-1">
                           <CardTitle className="text-xl font-semibold text-foreground mb-2">
-                            {service.title}
+                            {t(service.titleKey)}
                           </CardTitle>
                           <CardDescription className="text-muted-foreground text-base">
-                            {service.description}
+                            {t(service.descriptionKey)}
                           </CardDescription>
                         </div>
                       </div>
