@@ -5,33 +5,25 @@ import teamConsultingImage from "@/assets/team-consulting.jpg";
 import officeExteriorImage from "@/assets/office-exterior.jpg";
 import teamCollaborationImage from "@/assets/team-collaboration.jpg";
 import officeBuildingImage from "@/assets/office-building.jpg";
-
 const About = () => {
-  const carouselSlides = [
-    {
-      image: teamConsultingImage,
-      title: "Uzman Danışmanlık",
-      description: "15+ yıllık deneyimimizle teknoloji çözümleri sunuyoruz"
-    },
-    {
-      image: teamCollaborationImage,
-      title: "Takım Çalışması",
-      description: "Profesyonel ekibimizle müşteri odaklı hizmet"
-    },
-    {
-      image: officeBuildingImage,
-      title: "Modern Ofis",
-      description: "Ankara merkezli güçlü altyapımız"
-    },
-    {
-      image: officeExteriorImage,
-      title: "Teknoloji Merkezi",
-      description: "Yenilikçi çözümler geliştirme merkezi"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const carouselSlides = [{
+    image: teamConsultingImage,
+    title: "Uzman Danışmanlık",
+    description: "15+ yıllık deneyimimizle teknoloji çözümleri sunuyoruz"
+  }, {
+    image: teamCollaborationImage,
+    title: "Takım Çalışması",
+    description: "Profesyonel ekibimizle müşteri odaklı hizmet"
+  }, {
+    image: officeBuildingImage,
+    title: "Modern Ofis",
+    description: "Ankara merkezli güçlü altyapımız"
+  }, {
+    image: officeExteriorImage,
+    title: "Teknoloji Merkezi",
+    description: "Yenilikçi çözümler geliştirme merkezi"
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -40,7 +32,7 @@ const About = () => {
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
               Hakkımızda
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-12 slide-up">
+            <p className="text-xl max-w-3xl mx-auto mb-12 slide-up text-slate-50">
               2C olarak müşterilerimize ihtiyacı doğrultusunda değer oluşturmayı ve entegre çözümler sunarak platform bağımsız bir şekilde çalışmalarına devam etmekteyiz. Firmamız, verimliliğin artırılması, rekabet üstünlüğünün sağlanmasını ve ölçülebilir maliyet kazancının oluşması için müşteri odaklı bir firma olmayı ön planda tutmaktadır. Yenilikçi fikirlerimiz ve pazar-odaklı hizmetlerimiz aracılığıyla daha güvenli ve sağlıklı yaşam için karşılaşılan sorunları çözerek sürdürülebilir bir başarı amaçlıyoruz.
             </p>
           </div>
@@ -153,8 +145,6 @@ const About = () => {
         </div>
       </main>
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default About;
