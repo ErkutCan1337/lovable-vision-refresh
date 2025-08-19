@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz - 2C Teknoloji</title>
+    <meta name="description" content="2C Teknoloji hizmetleri: Sistem entegrasyon, veri merkezi çözümleri, HPC, bilişim güvenliği, sanallaştırma ve felaket kurtarma hizmetleri." />
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar navbar-expand-lg fixed-top custom-header">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index-static.html">
+                <img src="public/lovable-uploads/bd2f2332-ad41-4c85-828f-28da412f9907.png" alt="2C Teknoloji Logo" class="logo-img me-2">
+                <span class="brand-text">2C Teknoloji</span>
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-static.html" data-key="nav.home">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html" data-key="nav.about">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html" data-key="nav.services">Hizmetler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html" data-key="nav.projects">Projeler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="careers.html" data-key="nav.careers">Kariyer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="references.html" data-key="nav.references">Referanslar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html" data-key="nav.contact">İletişim</a>
+                    </li>
+                </ul>
+                
+                <div class="d-flex align-items-center gap-3">
+                    <div class="language-selector">
+                        <button class="btn btn-outline-primary btn-sm" onclick="switchLanguage()">
+                            <span id="current-lang">TR</span> <i class="bi bi-globe"></i>
+                        </button>
+                    </div>
+                    <a href="contact.html" class="btn btn-primary" data-key="nav.contact">İletişim</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero py-5 mt-5">
+        <div class="container">
+            <div class="row align-items-center py-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h1 class="display-4 fw-bold mb-4" data-key="services.title">Hizmetlerimiz</h1>
+                    <p class="lead" data-key="services.subtitle">Teknoloji alanında geniş yelpazedeki uzmanlığımızla müşterilerimize değer katıyoruz</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- System Integration -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="bi bi-cpu-fill"></i>
+                            </div>
+                            <h3 data-key="services.system_integration.title">Sistem Entegrasyonu</h3>
+                        </div>
+                        <p data-key="services.system_integration.description">Farklı teknolojileri bir araya getirerek kusursuz çalışan sistemler kuruyoruz.</p>
+                        <ul class="service-features">
+                            <li data-key="services.features.infrastructure_design">Altyapı tasarımı</li>
+                            <li data-key="services.features.system_integration">Sistem entegrasyonu</li>
+                            <li data-key="services.features.performance_optimization">Performans optimizasyonu</li>
+                        </ul>
+                        <div class="service-technologies">
+                            <span class="tech-badge">VMware</span>
+                            <span class="tech-badge">Microsoft</span>
+                            <span class="tech-badge">Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data Center -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="bi bi-hdd-rack-fill"></i>
+                            </div>
+                            <h3 data-key="services.data_center.title">Veri Merkezi Çözümleri</h3>
+                        </div>
+                        <p data-key="services.data_center.description">Modern veri merkezi altyapıları ile verilerinizi güvende tutuyoruz.</p>
+                        <ul class="service-features">
+                            <li data-key="services.features.data_center_design">Veri merkezi tasarımı</li>
+                            <li data-key="services.features.infrastructure_setup">Altyapı kurulumu</li>
+                            <li data-key="services.features.monitoring_24_7">7/24 izleme</li>
+                        </ul>
+                        <div class="service-technologies">
+                            <span class="tech-badge">Dell EMC</span>
+                            <span class="tech-badge">HPE</span>
+                            <span class="tech-badge">NetApp</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HPC -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="bi bi-lightning-charge-fill"></i>
+                            </div>
+                            <h3 data-key="services.hpc.title">Süper Bilgisayar Teknolojileri</h3>
+                        </div>
+                        <p data-key="services.hpc.description">Yüksek performanslı hesaplama çözümleri ile karmaşık problemleri çözüyoruz.</p>
+                        <ul class="service-features">
+                            <li data-key="services.features.hpc_cluster_setup">HPC cluster kurulumu</li>
+                            <li data-key="services.features.performance_analysis">Performans analizi</li>
+                            <li data-key="services.features.scalable_solutions">Ölçeklenebilir çözümler</li>
+                        </ul>
+                        <div class="service-technologies">
+                            <span class="tech-badge">NVIDIA</span>
+                            <span class="tech-badge">Intel</span>
+                            <span class="tech-badge">CUDA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="bi bi-shield-fill-check"></i>
+                            </div>
+                            <h3 data-key="services.security.title">Bilişim Güvenliği</h3>
+                        </div>
+                        <p data-key="services.security.description">Kapsamlı güvenlik çözümleri ile dijital varlıklarınızı koruyoruz.</p>
+                        <ul class="service-features">
+                            <li data-key="services.features.security_analysis">Güvenlik analizi</li>
+                            <li data-key="services.features.protection_systems">Koruma sistemleri</li>
+                            <li data-key="services.features.risk_management">Risk yönetimi</li>
+                        </ul>
+                        <div class="service-technologies">
+                            <span class="tech-badge">Fortinet</span>
+                            <span class="tech-badge">Cisco</span>
+                            <span class="tech-badge">Palo Alto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Virtualization -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="bi bi-clouds-fill"></i>
+                            </div>
+                            <h3 data-key="services.virtualization.title">Sanallaştırma</h3>
+                        </div>
+                        <p data-key="services.virtualization.description">Kaynaklarınızı optimize ederek maliyetlerinizi düşürüyoruz.</p>
+                        <ul class="service-features">
+                            <li data-key="services.features.vm_infrastructure">VM altyapısı</li>
+                            <li data-key="services.features.resource_optimization">Kaynak optimizasyonu</li>
+                            <li data-key="services.features.central_management">Merkezi yönetim</li>
+                        </ul>
+                        <div class="service-technologies">
+                            <span class="tech-badge">VMware vSphere</span>
+                            <span class="tech-badge">Hyper-V</span>
+                            <span class="tech-badge">KVM</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Disaster Recovery -->
+                <div class="col-lg-6">
+                    <div class="service-detail-card h-100">
+                        <div class="service-header">
+                            <div class="service-icon">
+                                <i class="bi bi-arrow-repeat"></i>
+                            </div>
+                            <h3 data-key="services.disaster_recovery.title">Felaket Kurtarma</h3>
+                        </div>
+                        <p data-key="services.disaster_recovery.description">İş sürekliliğinizi garanti altına alıyoruz.</p>
+                        <ul class="service-features">
+                            <li data-key="services.features.backup_strategy">Yedekleme stratejisi</li>
+                            <li data-key="services.features.recovery_plans">Kurtarma planları</li>
+                            <li data-key="services.features.business_continuity">İş sürekliliği</li>
+                        </ul>
+                        <div class="service-technologies">
+                            <span class="tech-badge">Veeam</span>
+                            <span class="tech-badge">Commvault</span>
+                            <span class="tech-badge">Zerto</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title" data-key="services.process.title">Çalışma Sürecimiz</h2>
+                    <p class="section-subtitle" data-key="services.process.subtitle">Projelerinizi başarıyla tamamlamak için izlediğimiz adımlar</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-icon">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h4 data-key="services.process.analysis">Analiz</h4>
+                        <p data-key="services.process.analysis_desc">İhtiyaçlarınızı detaylı olarak analiz ediyoruz</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-icon">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                        <h4 data-key="services.process.design">Tasarım</h4>
+                        <p data-key="services.process.design_desc">Size özel çözüm tasarımı geliştiriyoruz</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-icon">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h4 data-key="services.process.implementation">Uygulama</h4>
+                        <p data-key="services.process.implementation_desc">Çözümü profesyonelce hayata geçiriyoruz</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h4 data-key="services.process.support">Destek</h4>
+                        <p data-key="services.process.support_desc">Sürekli destek ve bakım hizmeti sunuyoruz</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title" data-key="services.cta.title">Projeleriniz İçin Hemen İletişime Geçin</h2>
+                    <p class="section-subtitle" data-key="services.cta.subtitle">Uzman ekibimizle size özel çözümler geliştirmek için hazırız</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn btn-primary btn-lg me-3" data-key="services.cta.contact">İletişime Geçin</a>
+                        <a href="projects.html" class="btn btn-outline-primary btn-lg" data-key="services.cta.projects">Projelerimizi İnceleyin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">
+                        <img src="public/lovable-uploads/bd2f2332-ad41-4c85-828f-28da412f9907.png" alt="2C Teknoloji Logo" class="footer-logo mb-3">
+                        <h5>2C Teknoloji</h5>
+                        <p data-key="footer.description">Sistem entegrasyon, veri merkezi, HPC ve bilişim güvenliği alanında uzman teknoloji çözümlerinin güvenilir partneri.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title" data-key="footer.company">Şirket</h6>
+                    <ul class="footer-links">
+                        <li><a href="about.html" data-key="nav.about">Hakkımızda</a></li>
+                        <li><a href="services.html" data-key="nav.services">Hizmetler</a></li>
+                        <li><a href="projects.html" data-key="nav.projects">Projeler</a></li>
+                        <li><a href="careers.html" data-key="nav.careers">Kariyer</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="footer-title" data-key="footer.services">Hizmetler</h6>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-key="services.system_integration.title">Sistem Entegrasyonu</a></li>
+                        <li><a href="services.html" data-key="services.data_center.title">Veri Merkezi</a></li>
+                        <li><a href="services.html" data-key="services.hpc.title">HPC</a></li>
+                        <li><a href="services.html" data-key="services.security.title">Bilişim Güvenliği</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h6 class="footer-title" data-key="footer.contact">İletişim</h6>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span data-key="contact.address">Ankara, Türkiye</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-telephone-fill"></i>
+                            <span data-key="contact.phone">+90 312 XXX XX XX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="bi bi-envelope-fill"></i>
+                            <span data-key="contact.email">info@2cteknoloji.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0" data-key="footer.copyright">&copy; 2024 2C Teknoloji. Tüm hakları saklıdır.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0" data-key="footer.tagline">Teknoloji çözümlerinde güvenilir partneri</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/translations.js"></script>
+    <script src="assets/js/app.js"></script>
+
+    <style>
+    .service-detail-card {
+        background: rgba(var(--surface), 0.9);
+        border: 1px solid rgba(var(--border), 0.3);
+        border-radius: var(--radius-lg);
+        padding: 2.5rem;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .service-detail-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: var(--gradient-primary);
+    }
+    
+    .service-detail-card:hover {
+        transform: translateY(-10px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .service-header {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .service-header .service-icon {
+        font-size: 2.5rem;
+        color: rgb(var(--primary));
+    }
+    
+    .service-header h3 {
+        margin: 0;
+        color: rgb(var(--text-primary));
+    }
+    
+    .tech-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: rgba(var(--primary), 0.1);
+        color: rgb(var(--primary));
+        border-radius: var(--radius-sm);
+        font-size: 0.875rem;
+        margin: 0.25rem 0.25rem 0 0;
+        border: 1px solid rgba(var(--primary), 0.2);
+    }
+    
+    .process-step {
+        text-align: center;
+        position: relative;
+        padding: 2rem 1rem;
+    }
+    
+    .step-number {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40px;
+        height: 40px;
+        background: var(--gradient-primary);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    
+    .step-icon {
+        font-size: 3rem;
+        color: rgb(var(--primary));
+        margin: 2rem 0 1rem;
+    }
+    
+    .process-step h4 {
+        color: rgb(var(--text-primary));
+        margin-bottom: 1rem;
+    }
+    
+    .cta-buttons {
+        margin-top: 2rem;
+    }
+    
+    @media (max-width: 768px) {
+        .service-header {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .cta-buttons .btn {
+            display: block;
+            margin: 0.5rem 0;
+        }
+    }
+    </style>
+</body>
+</html>
