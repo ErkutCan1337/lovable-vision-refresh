@@ -30,7 +30,7 @@ const Contact = () => {
     {
       icon: Phone,
       titleKey: "contact.phone",
-      details: ["+90 312 XXX XX XX", "+90 312 XXX XX XX"]
+      details: ["+90 (312) 440 47 47", "+1 312 625 21 17"]
     }
   ];
   return (
