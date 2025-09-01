@@ -343,7 +343,7 @@ const translations = {
     'about.details.p1': '2C, ülkemiz ekonomisine katkı sağlayan yerli teknolojiler üretebilen, rekabet edilebilir ürünler ve çözümler sunan, müşteri odaklı kaliteli hizmet veren bir teknoloji şirketi olarak faaliyet göstermektedir.',
     'about.details.p2': 'Uzman kadromuz ile sistem entegrasyon, veri merkezi çözümleri, süper bilgisayar teknolojileri, bilişim güvenliği, sanallaştırma ve felaket kurtarma alanlarında kapsamlı hizmetler sunmaktayız.',
     'about.mission.title': 'Misyonumuz',
-    'about.mission.description': 'Müşterilerimizin ihtiyaçlarını net bir şekilde çıkarılması ve bu ihtiyacın karşılanması için en uygun teknolojinin sağlanması Müşteri memnuniyetini sürekliliğinin sağlanması Yüksek kalitede ürün ve hizmetler sunulması Teknoloji alt yapılarının hatasız bir şekilde hazırlanması Global pazarda rekabet edebilir teknolojilerin üretilmesi Bilgi toplumuna dönüşüm sürecinde Türkiye\'nin rekabet gücünün ve refah seviyesinin artmasına destek verilmesi şeklindedir',
+    'about.mission.description': 'Müşterilerimizin ihtiyaçlarının net bir şekilde çıkarılması ve bu ihtiyacın karşılanması için en uygun teknolojinin sağlanması, müşteri memnuniyetinin sürekliliğinin sağlanması, yüksek kalitede ürün ve hizmetler sunulması, teknoloji altyapılarının hatasız bir şekilde hazırlanması, global pazarda rekabet edebilir teknolojilerin üretilmesi ve bilgi toplumuna dönüşüm sürecinde Türkiye''nin rekabet gücünün ve refah seviyesinin artmasına destek verilmesi şeklindedir.',
     'about.why2c.title': 'Neden 2C?',
     'about.why2c.experience': '15+ yıllık sektör deneyimi',
     'about.why2c.expert_team': 'Uzman teknik kadro',
