@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ImageCarousel } from "@/components/ImageCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useNavigate } from "react-router-dom";
@@ -11,10 +10,6 @@ import {
   FolderOpen, Camera, KeyRound, BrainCircuit, Layers,
   Cpu, Zap, Building2, ArrowRight
 } from "lucide-react";
-import modernDatacenterImage from "@/assets/modern-datacenter.jpg";
-import supercomputerImage from "@/assets/supercomputer.jpg";
-import networkInfrastructureImage from "@/assets/network-infrastructure.jpg";
-import softwareDevelopmentImage from "@/assets/software-development.jpg";
 
 const Services = () => {
   const { t } = useLanguage();
@@ -249,52 +244,41 @@ const Services = () => {
       gradient: "from-violet-600 to-purple-600"
     }
   ];
-  
-  const carouselSlides = [
-    {
-      image: modernDatacenterImage,
-      titleKey: "services.data_center.title",
-      descriptionKey: "services.data_center.description"
-    },
-    {
-      image: supercomputerImage,
-      titleKey: "services.hpc.title", 
-      descriptionKey: "services.hpc.description"
-    },
-    {
-      image: networkInfrastructureImage,
-      titleKey: "services.system_integration.title",
-      descriptionKey: "services.system_integration.description"
-    },
-    {
-      image: softwareDevelopmentImage,
-      titleKey: "services.virtualization.title",
-      descriptionKey: "services.virtualization.description"
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Header Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6 fade-in">
-              {t("services.title")}
-            </h1>
-            <p className="text-lg leading-8 text-muted-foreground max-w-3xl mx-auto mb-12 slide-up">
-              {t("services.subtitle")}
-            </p>
-          </div>
-
-          {/* Services Carousel */}
-          <div className="mb-16">
-            <ImageCarousel slides={carouselSlides.map(slide => ({
-              image: slide.image,
-              title: t(slide.titleKey),
-              description: t(slide.descriptionKey)
-            }))} className="max-w-5xl mx-auto" />
+          {/* Hero Section with Interactive Grid */}
+          <div className="relative mb-20 overflow-hidden rounded-3xl bg-gradient-primary p-1">
+            <div className="relative bg-background rounded-3xl p-12 lg:p-16">
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary-glow/20" />
+              </div>
+              
+              <div className="relative z-10 text-center">
+                <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
+                  {t("services.title")}
+                </h1>
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12 slide-up">
+                  {t("services.subtitle")}
+                </p>
+                
+                {/* Animated Service Icons Grid */}
+                <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-4 mt-12">
+                  {[Server, Shield, Cloud, HardDrive, Network, Database, Globe, Lock, Monitor, Settings, Cpu, Zap].map((Icon, index) => (
+                    <div 
+                      key={index} 
+                      className="flex items-center justify-center p-4 rounded-xl bg-gradient-card border border-border/50 hover:border-primary/50 hover:scale-110 transition-all duration-300 fade-in"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Products and Solutions Section */}

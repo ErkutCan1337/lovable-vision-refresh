@@ -1,14 +1,9 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ImageCarousel } from "@/components/ImageCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Monitor, ShoppingCart, Shield, Truck, CreditCard } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import projectManagementImage from "@/assets/project-management.jpg";
-import projectDashboardImage from "@/assets/project-dashboard.jpg";
-import modernDatacenterImage from "@/assets/modern-datacenter.jpg";
-import networkInfrastructureImage from "@/assets/network-infrastructure.jpg";
 
 const Projects = () => {
   const { t } = useLanguage();
@@ -64,47 +59,45 @@ const Projects = () => {
     }
   ];
 
-  const carouselSlides = [
-    {
-      image: projectManagementImage,
-      title: t("projects.carousel.management.title"),
-      description: t("projects.carousel.management.description")
-    },
-    {
-      image: projectDashboardImage,
-      title: t("projects.carousel.dashboard.title"),
-      description: t("projects.carousel.dashboard.description")
-    },
-    {
-      image: modernDatacenterImage,
-      title: t("projects.carousel.infrastructure.title"),
-      description: t("projects.carousel.infrastructure.description")
-    },
-    {
-      image: networkInfrastructureImage,
-      title: t("projects.carousel.network.title"),
-      description: t("projects.carousel.network.description")
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
-              {t("projects.title")}
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12 slide-up">
-              {t("projects.subtitle")}
-            </p>
-          </div>
+          {/* Hero Section with Project Showcase */}
+          <div className="relative mb-20">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 -z-10 overflow-hidden">
+              <div className="absolute left-[50%] top-0 -translate-x-[50%] w-[200%] h-[200%]">
+                <div className="h-full w-full bg-gradient-to-r from-primary/5 via-transparent to-primary-glow/5 rotate-12" />
+              </div>
+            </div>
+            
+            <div className="text-center mb-12">
+              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
+                {t("projects.title")}
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto slide-up">
+                {t("projects.subtitle")}
+              </p>
+            </div>
 
-          {/* Projects Carousel */}
-          <div className="mb-16">
-            <ImageCarousel slides={carouselSlides} className="max-w-5xl mx-auto" />
+            {/* Live Project Stats Banner */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8 rounded-2xl bg-gradient-card border border-border/50">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-2">25+</div>
+                <div className="text-sm text-muted-foreground">{t("projects.stats.active")}</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-success mb-2">150+</div>
+                <div className="text-sm text-muted-foreground">{t("projects.stats.completed")}</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-accent-foreground mb-2">98%</div>
+                <div className="text-sm text-muted-foreground">{t("projects.stats.satisfaction")}</div>
+              </div>
+            </div>
           </div>
 
           {/* Projects Grid */}

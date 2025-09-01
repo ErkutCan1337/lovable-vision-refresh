@@ -1,15 +1,11 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ImageCarousel } from "@/components/ImageCarousel";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { MapPin, Clock, Users, Code } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import developersWorkingImage from "@/assets/developers-working.jpg";
-import careerGrowthImage from "@/assets/career-growth.jpg";
 import teamCollaborationImage from "@/assets/team-collaboration.jpg";
-import officeBuildingImage from "@/assets/office-building.jpg";
 
 const Careers = () => {
   const { t } = useLanguage();
@@ -82,47 +78,49 @@ const Careers = () => {
     }
   ];
 
-  const carouselSlides = [
-    {
-      image: developersWorkingImage,
-      title: t("careers.carousel.development.title"),
-      description: t("careers.carousel.development.description")
-    },
-    {
-      image: careerGrowthImage,
-      title: t("careers.carousel.growth.title"),
-      description: t("careers.carousel.growth.description")
-    },
-    {
-      image: teamCollaborationImage,
-      title: t("careers.carousel.teamwork.title"),
-      description: t("careers.carousel.teamwork.description")
-    },
-    {
-      image: officeBuildingImage,
-      title: t("careers.carousel.office.title"),
-      description: t("careers.carousel.office.description")
-    }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
-              {t("careers.title")}
-            </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12 slide-up">
-              {t("careers.subtitle")}
-            </p>
-          </div>
-
-          {/* Careers Carousel */}
-          <div className="mb-16">
-            <ImageCarousel slides={carouselSlides} className="max-w-5xl mx-auto" />
+          {/* Hero Section with Video Background Effect */}
+          <div className="relative mb-20 rounded-3xl overflow-hidden">
+            {/* Animated Background */}
+            <div className="absolute inset-0 bg-gradient-hero opacity-20" />
+            <div className="absolute inset-0">
+              <img 
+                src={teamCollaborationImage} 
+                alt="Team collaboration" 
+                className="w-full h-full object-cover opacity-30"
+              />
+            </div>
+            
+            {/* Content Overlay */}
+            <div className="relative z-10 py-20 px-8 lg:px-16 text-center">
+              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
+                {t("careers.title")}
+              </h1>
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-8 slide-up">
+                {t("careers.subtitle")}
+              </p>
+              
+              {/* Quick Stats */}
+              <div className="flex flex-wrap justify-center gap-8 mt-12">
+                <div className="bg-background/90 backdrop-blur-sm rounded-xl p-4 px-8 border border-border/50">
+                  <div className="text-2xl font-bold text-primary">10+</div>
+                  <div className="text-sm text-muted-foreground">{t("careers.stats.openings")}</div>
+                </div>
+                <div className="bg-background/90 backdrop-blur-sm rounded-xl p-4 px-8 border border-border/50">
+                  <div className="text-2xl font-bold text-primary">50+</div>
+                  <div className="text-sm text-muted-foreground">{t("careers.stats.team")}</div>
+                </div>
+                <div className="bg-background/90 backdrop-blur-sm rounded-xl p-4 px-8 border border-border/50">
+                  <div className="text-2xl font-bold text-primary">5+</div>
+                  <div className="text-sm text-muted-foreground">{t("careers.stats.benefits")}</div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Benefits Section */}

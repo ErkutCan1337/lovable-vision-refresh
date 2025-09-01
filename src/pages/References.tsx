@@ -1,28 +1,18 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { ReferencesSlider } from "@/components/ReferencesSlider";
 import { Building2, Users, Award, Handshake } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const References = () => {
   const { t } = useLanguage();
   
-  const referenceSlides = [
-    {
-      image: "/lovable-uploads/fde2526d-5c5b-407c-800a-30d1b8f0f766.png",
-      title: t("references.slide1.title"),
-      description: t("references.slide1.description")
-    },
-    {
-      image: "/lovable-uploads/6d37afee-58c6-467e-9e16-e824f40f3c94.png",
-      title: t("references.slide2.title"),
-      description: t("references.slide2.description")
-    },
-    {
-      image: "/lovable-uploads/00c495b0-56d9-4818-8ef6-25ea2c641c8d.png",
-      title: t("references.slide3.title"),
-      description: t("references.slide3.description")
-    }
+  const partnerLogos = [
+    "/lovable-uploads/fde2526d-5c5b-407c-800a-30d1b8f0f766.png",
+    "/lovable-uploads/6d37afee-58c6-467e-9e16-e824f40f3c94.png",
+    "/lovable-uploads/00c495b0-56d9-4818-8ef6-25ea2c641c8d.png",
+    "/lovable-uploads/95d53cb6-8d9c-4673-bb14-e44a0abde0e0.png",
+    "/lovable-uploads/bd2f2332-ad41-4c85-828f-28da412f9907.png",
+    "/lovable-uploads/c042e8b6-1a7e-45de-9d31-1bed58dacbac.png"
   ];
 
   const sectors = [
@@ -45,14 +35,34 @@ const References = () => {
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Header Section */}
-          <div className="mx-auto max-w-3xl text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              {t("references.title")}
-            </h1>
-            <p className="text-lg leading-8 text-muted-foreground">
-              {t("references.subtitle")}
-            </p>
+          {/* Hero Section with Animated Partner Logos */}
+          <div className="relative mb-20">
+            <div className="mx-auto max-w-3xl text-center mb-12">
+              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
+                {t("references.title")}
+              </h1>
+              <p className="text-lg leading-8 text-muted-foreground">
+                {t("references.subtitle")}
+              </p>
+            </div>
+            
+            {/* Animated Logo Carousel */}
+            <div className="relative overflow-hidden py-8">
+              <div className="flex animate-scroll gap-8">
+                {[...partnerLogos, ...partnerLogos].map((logo, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-48 h-24 bg-white/95 rounded-xl p-4 flex items-center justify-center shadow-md hover:shadow-lg transition-shadow"
+                  >
+                    <img
+                      src={logo}
+                      alt={`Partner ${index + 1}`}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Stats Section */}
@@ -96,13 +106,29 @@ const References = () => {
             </div>
           </div>
 
-          {/* Partners Section */}
+          {/* Partners Grid Section */}
           <div className="mb-20">
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              {t("references.partners_title")}
+              {t("references.partners.title")}
             </h2>
             
-            <ReferencesSlider slides={referenceSlides} />
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {partnerLogos.map((logo, index) => (
+                <div
+                  key={index}
+                  className="group relative bg-gradient-card border border-border/50 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105 fade-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="h-24 flex items-center justify-center">
+                    <img
+                      src={logo}
+                      alt={`Partner ${index + 1}`}
+                      className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Sectors We Serve */}
