@@ -250,6 +250,37 @@ const Services = () => {
       <Header />
       <main className="pt-16 pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          {/* Hero Section with Interactive Grid */}
+          <div className="relative mb-20 overflow-hidden rounded-3xl bg-gradient-primary p-1">
+            <div className="relative bg-background rounded-3xl p-12 lg:p-16">
+              <div className="absolute inset-0 opacity-10">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary-glow/20" />
+              </div>
+              
+              <div className="relative z-10 text-center">
+                <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl mb-6 fade-in">
+                  {t("services.title")}
+                </h1>
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto mb-12 slide-up">
+                  {t("services.subtitle")}
+                </p>
+                
+                {/* Animated Service Icons Grid */}
+                <div className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-4 mt-12">
+                  {[Server, Shield, Cloud, HardDrive, Network, Database, Globe, Lock, Monitor, Settings, Cpu, Zap].map((Icon, index) => (
+                    <div 
+                      key={index} 
+                      className="flex items-center justify-center p-4 rounded-xl bg-gradient-card border border-border/50 hover:border-primary/50 hover:scale-110 transition-all duration-300 fade-in"
+                      style={{ animationDelay: `${index * 0.1}s` }}
+                    >
+                      <Icon className="w-6 h-6 text-primary" />
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Products and Solutions Section */}
           <div className="mb-20">
             <div className="text-center mb-12">
