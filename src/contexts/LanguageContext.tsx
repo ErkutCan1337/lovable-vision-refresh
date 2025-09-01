@@ -230,6 +230,9 @@ const translations = {
     // Careers
     'careers.title': 'Kariyer Fırsatları',
     'careers.subtitle': 'Aramıza katılacak arkadaşlar, Ankara\'da bulunan işyerimizde Java teknolojileri kullanarak, web tabanlı ve dağıtık mimaride yazılım geliştirme projelerinde çalışma imkanı bulacaklar.',
+    'careers.stats.openings': 'Açık Pozisyonlar',
+    'careers.stats.team': 'Ekip Üyeleri',
+    'careers.stats.benefits': 'Yan Haklar',
     'careers.why_join.title': 'Neden 2C Teknoloji?',
     'careers.growth.title': 'Takım Çalışması',
     'careers.growth.description': 'Deneyimli ve uzman kadro ile birlikte çalışma fırsatı',
@@ -602,6 +605,9 @@ const translations = {
     // Careers
     'careers.title': 'Career Opportunities',
     'careers.subtitle': 'Friends who will join us will have the opportunity to work on web-based and distributed architecture software development projects using Java technologies at our workplace in Ankara.',
+    'careers.stats.openings': 'Open Positions',
+    'careers.stats.team': 'Team Members',
+    'careers.stats.benefits': 'Benefits',
     'careers.why_join.title': 'Why 2C Technology?',
     'careers.growth.title': 'Team Work',
     'careers.growth.description': 'Opportunity to work with experienced and expert staff',
