@@ -106,31 +106,6 @@ const References = () => {
             </div>
           </div>
 
-          {/* Partners Grid Section */}
-          <div className="mb-20">
-            <h2 className="text-3xl font-bold text-center text-foreground mb-12">
-              {t("references.partners.title")}
-            </h2>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {partnerLogos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="group relative bg-gradient-card border border-border/50 rounded-xl p-6 hover:border-primary/50 transition-all duration-300 hover:scale-105 fade-in"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <div className="h-24 flex items-center justify-center">
-                    <img
-                      src={logo}
-                      alt={`Partner ${index + 1}`}
-                      className="max-w-full max-h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* Sectors We Serve */}
           <div className="mb-16">
             <h2 className="text-3xl font-bold text-center text-foreground mb-12">
