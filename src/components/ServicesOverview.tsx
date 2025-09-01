@@ -12,6 +12,7 @@ export function ServicesOverview() {
       icon: Server,
       titleKey: "services.system_integration.title",
       descriptionKey: "services.system_integration.description",
+      link: "/products/system-integration",
       features: [
         "services.features.infrastructure_design",
         "services.features.system_integration",
@@ -22,6 +23,7 @@ export function ServicesOverview() {
       icon: HardDrive,
       titleKey: "services.data_center.title",
       descriptionKey: "services.data_center.description",
+      link: "/products/data-center",
       features: [
         "services.features.data_center_design", 
         "services.features.infrastructure_setup", 
@@ -32,6 +34,7 @@ export function ServicesOverview() {
       icon: Network,
       titleKey: "services.hpc.title",
       descriptionKey: "services.hpc.description",
+      link: "/products/hpc-solutions",
       features: [
         "services.features.hpc_cluster_setup", 
         "services.features.performance_analysis", 
@@ -42,6 +45,7 @@ export function ServicesOverview() {
       icon: Shield,
       titleKey: "services.security.title",
       descriptionKey: "services.security.description",
+      link: "/products/security-solutions",
       features: [
         "services.features.security_analysis", 
         "services.features.protection_systems", 
@@ -52,6 +56,7 @@ export function ServicesOverview() {
       icon: Cloud,
       titleKey: "services.virtualization.title",
       descriptionKey: "services.virtualization.description",
+      link: "/products/virtualization",
       features: [
         "services.features.vm_infrastructure", 
         "services.features.resource_optimization", 
@@ -62,6 +67,7 @@ export function ServicesOverview() {
       icon: AlertTriangle,
       titleKey: "services.disaster_recovery.title",
       descriptionKey: "services.disaster_recovery.description",
+      link: "/products/disaster-recovery",
       features: [
         "services.features.backup_strategy", 
         "services.features.recovery_plans", 
@@ -115,7 +121,7 @@ export function ServicesOverview() {
                     ))}
                   </ul>
                   <Button variant="outline" size="sm" className="w-full group" asChild>
-                    <Link to="/services" className="flex items-center justify-center gap-2">
+                    <Link to={service.link} className="flex items-center justify-center gap-2">
                       {t("projects.view_details")}
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </Link>

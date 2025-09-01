@@ -11,6 +11,12 @@ import Careers from "./pages/Careers";
 import References from "./pages/References";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import SystemIntegration from "./pages/products/SystemIntegration";
+import DataCenter from "./pages/products/DataCenter";
+import HpcSolutions from "./pages/products/HpcSolutions";
+import SecuritySolutions from "./pages/products/SecuritySolutions";
+import Virtualization from "./pages/products/Virtualization";
+import DisasterRecovery from "./pages/products/DisasterRecovery";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +34,12 @@ const App = () => (
           <Route path="/careers" element={<Careers />} />
           <Route path="/references" element={<References />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/products/system-integration" element={<SystemIntegration />} />
+          <Route path="/products/data-center" element={<DataCenter />} />
+          <Route path="/products/hpc-solutions" element={<HpcSolutions />} />
+          <Route path="/products/security-solutions" element={<SecuritySolutions />} />
+          <Route path="/products/virtualization" element={<Virtualization />} />
+          <Route path="/products/disaster-recovery" element={<DisasterRecovery />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
