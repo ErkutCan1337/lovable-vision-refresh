@@ -151,6 +151,9 @@ const translations = {
     'projects.status.active': 'Aktif', 
     'projects.status.development': 'Geliştirme Aşamasında',
     'projects.status.ongoing': 'Devam Ediyor',
+    'projects.stats.active': 'Aktif Projeler',
+    'projects.stats.completed': 'Tamamlanan Projeler',
+    'projects.stats.satisfaction': 'Müşteri Memnuniyeti',
     
     // Project carousel
     'projects.carousel.management.title': 'Proje Yönetimi',
@@ -520,6 +523,9 @@ const translations = {
     'projects.status.active': 'Active',
     'projects.status.development': 'In Development',
     'projects.status.ongoing': 'Ongoing',
+    'projects.stats.active': 'Active Projects',
+    'projects.stats.completed': 'Completed Projects',
+    'projects.stats.satisfaction': 'Client Satisfaction',
     
     // Project carousel
     'projects.carousel.management.title': 'Project Management',
