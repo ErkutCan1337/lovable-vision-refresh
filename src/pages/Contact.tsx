@@ -25,7 +25,7 @@ const Contact = () => {
     {
       icon: Mail,
       titleKey: "contact.email",
-      details: ["info@2cteknoloji.com", "destek@2cteknoloji.com"]
+      details: ["info@2cteknoloji.com", "iletisim@2cteknoloji.com"]
     },
     {
       icon: Phone,
