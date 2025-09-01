@@ -17,6 +17,11 @@ import HpcSolutions from "./pages/products/HpcSolutions";
 import SecuritySolutions from "./pages/products/SecuritySolutions";
 import Virtualization from "./pages/products/Virtualization";
 import DisasterRecovery from "./pages/products/DisasterRecovery";
+import InformationManagement from "./pages/products/InformationManagement";
+import DigitalArchiving from "./pages/products/DigitalArchiving";
+import WebMobile from "./pages/products/WebMobile";
+import BusinessIntelligence from "./pages/products/BusinessIntelligence";
+import BigData from "./pages/products/BigData";
 
 const queryClient = new QueryClient();
 
@@ -35,11 +40,16 @@ const App = () => (
           <Route path="/references" element={<References />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/products/system-integration" element={<SystemIntegration />} />
-          <Route path="/products/data-center" element={<DataCenter />} />
-          <Route path="/products/hpc-solutions" element={<HpcSolutions />} />
-          <Route path="/products/security-solutions" element={<SecuritySolutions />} />
-          <Route path="/products/virtualization" element={<Virtualization />} />
-          <Route path="/products/disaster-recovery" element={<DisasterRecovery />} />
+        <Route path="/products/data-center" element={<DataCenter />} />
+        <Route path="/products/hpc-solutions" element={<HpcSolutions />} />
+        <Route path="/products/security-solutions" element={<SecuritySolutions />} />
+        <Route path="/products/virtualization" element={<Virtualization />} />
+        <Route path="/products/disaster-recovery" element={<DisasterRecovery />} />
+        <Route path="/products/information-management" element={<InformationManagement />} />
+        <Route path="/products/digital-archiving" element={<DigitalArchiving />} />
+        <Route path="/products/web-mobile" element={<WebMobile />} />
+        <Route path="/products/business-intelligence" element={<BusinessIntelligence />} />
+        <Route path="/products/big-data" element={<BigData />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
