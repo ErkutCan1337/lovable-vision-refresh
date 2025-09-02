@@ -229,3 +229,39 @@ All colors MUST be HSL. */
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }
+
+@keyframes gradient-xy {
+  0%, 100% {
+    transform: translateX(0%) translateY(0%);
+    opacity: 0.75;
+  }
+  25% {
+    transform: translateX(30%) translateY(-30%);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-20%) translateY(20%);
+    opacity: 0.85;
+  }
+  75% {
+    transform: translateX(20%) translateY(-10%);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.animate-gradient-xy {
+  animation: gradient-xy 4s ease infinite;
+}
+
+.animate-slide-progress {
+  animation: slide-progress 6s linear;
+}
