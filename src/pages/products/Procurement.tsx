@@ -1,9 +1,8 @@
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { useLanguage } from "@/contexts/LanguageContext";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   Package, 
   BarChart3, 
@@ -18,6 +17,7 @@ import {
   Settings,
   DollarSign
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import procurementHero from "@/assets/procurement-hero.jpg";
 
 export default function Procurement() {
@@ -57,26 +57,12 @@ export default function Procurement() {
   ];
 
   const benefits = [
-    {
-      icon: DollarSign,
-      title: t("procurement.benefits.cost.title"),
-      description: t("procurement.benefits.cost.desc")
-    },
-    {
-      icon: TrendingUp,
-      title: t("procurement.benefits.efficiency.title"),
-      description: t("procurement.benefits.efficiency.desc")
-    },
-    {
-      icon: Database,
-      title: t("procurement.benefits.visibility.title"),
-      description: t("procurement.benefits.visibility.desc")
-    },
-    {
-      icon: Settings,
-      title: t("procurement.benefits.automation.title"),
-      description: t("procurement.benefits.automation.desc")
-    }
+    t("procurement.benefits.cost.title"),
+    t("procurement.benefits.efficiency.title"),
+    t("procurement.benefits.visibility.title"),
+    t("procurement.benefits.automation.title"),
+    "Real-time reporting capabilities",
+    "Seamless integration with existing systems"
   ];
 
   return (
@@ -87,138 +73,129 @@ export default function Procurement() {
       <meta name="keywords" content="procurement management, asset management, ERP, inventory tracking, vendor management, purchase orders, spend analytics" />
       
       <Header />
-
+      
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
-        <div 
-          className="absolute inset-0 z-0"
-          style={{
-            backgroundImage: `url(${procurementHero})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-background/95 to-background/70" />
+      <section className="relative h-[60vh] min-h-[500px] overflow-hidden">
+        <div className="absolute inset-0">
+          <img 
+            src={procurementHero} 
+            alt={t("procurement.hero.title")} 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/50" />
         </div>
-        
-        <div className="container relative z-10 px-4">
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
-              {t("procurement.hero.title")}
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
-              {t("procurement.hero.subtitle")}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="group" asChild>
-                <Link to="/contact">
-                  {t("procurement.hero.cta")}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/services">
-                  {t("procurement.hero.explore")}
-                </Link>
-              </Button>
+        <div className="relative h-full flex items-center">
+          <div className="mx-auto max-w-7xl px-6 lg:px-8">
+            <div className="max-w-2xl">
+              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl fade-in">
+                {t("procurement.hero.title")}
+              </h1>
+              <p className="mt-6 text-lg leading-8 text-muted-foreground fade-in" style={{animationDelay: "0.1s"}}>
+                {t("procurement.hero.subtitle")}
+              </p>
+              <div className="mt-10 flex items-center gap-x-6 fade-in" style={{animationDelay: "0.2s"}}>
+                <Button size="lg" asChild>
+                  <Link to="/contact">
+                    {t("procurement.hero.cta")}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link to="/services">
+                    {t("procurement.hero.explore")}
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Overview Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              {t("procurement.overview.title")}
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              {t("procurement.overview.desc")}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="py-20">
-        <div className="container px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+      {/* Features Section */}
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center">
+            <h2 className="text-base font-semibold leading-7 text-primary">{t("procurement.overview.title")}</h2>
+            <p className="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {t("procurement.features.title")}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            </p>
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
               {t("procurement.features.subtitle")}
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
-                <feature.icon className="h-12 w-12 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </Card>
-            ))}
+          <div className="mx-auto mt-16 max-w-7xl">
+            <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <Card key={index} className="card-gradient border-border/50 glow-on-hover fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+                    <CardContent className="p-6">
+                      <div className="w-12 h-12 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
+                        <Icon className="h-6 w-6 text-primary-foreground" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-foreground mb-2">
+                        {feature.title}
+                      </h3>
+                      <p className="text-muted-foreground">
+                        {feature.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="container px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+      <section className="py-24 sm:py-32 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl text-center mb-12">
               {t("procurement.benefits.title")}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              {t("procurement.benefits.subtitle")}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex gap-4">
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <benefit.icon className="h-6 w-6 text-primary" />
-                  </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start gap-3 fade-in" style={{animationDelay: `${index * 0.05}s`}}>
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-foreground">{benefit}</span>
                 </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 text-foreground">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Process Flow Section */}
-      <section className="py-20">
-        <div className="container px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+      {/* Process Section */}
+      <section className="py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {t("procurement.process.title")}
             </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <p className="mt-6 text-lg leading-8 text-muted-foreground">
               {t("procurement.process.subtitle")}
             </p>
           </div>
-
-          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { step: "1", title: t("procurement.process.step1"), desc: t("procurement.process.step1.desc") },
               { step: "2", title: t("procurement.process.step2"), desc: t("procurement.process.step2.desc") },
               { step: "3", title: t("procurement.process.step3"), desc: t("procurement.process.step3.desc") },
               { step: "4", title: t("procurement.process.step4"), desc: t("procurement.process.step4.desc") }
             ].map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+              <div key={index} className="relative text-center fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="w-16 h-16 rounded-full bg-gradient-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                   {item.step}
                 </div>
                 <h3 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.desc}</p>
+                {index < 3 && (
+                  <ArrowRight className="hidden lg:block absolute top-8 -right-4 text-muted-foreground/50 h-5 w-5" />
+                )}
               </div>
             ))}
           </div>
@@ -226,26 +203,20 @@ export default function Procurement() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-muted/50 via-background to-muted/30 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-primary/10" />
-        <div className="container px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+      <section className="py-24 sm:py-32 bg-muted/30">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               {t("procurement.cta.title")}
             </h2>
-            <p className="text-xl mb-8 text-muted-foreground">
+            <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground">
               {t("procurement.cta.subtitle")}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group" asChild>
+            <div className="mt-10 flex items-center justify-center gap-x-6">
+              <Button size="lg" asChild>
                 <Link to="/contact">
                   {t("procurement.cta.demo")}
-                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/services">
-                  {t("procurement.cta.learn")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
