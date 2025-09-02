@@ -57,7 +57,7 @@ const References = () => {
                     <img
                       src={logo}
                       alt={`Partner ${index + 1}`}
-                      className="max-w-full max-h-full object-contain"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                 ))}
