@@ -190,14 +190,7 @@ const Services = () => {
       descriptionKey: "integration.disaster_recovery.description",
       path: "/products/disaster-recovery",
       gradient: "from-rose-600 to-red-600"
-    },
-    {
-      icon: BrainCircuit,
-      titleKey: "integration.big_data.title",
-      descriptionKey: "integration.big_data.description",
-      path: "/products/big-data",
-      gradient: "from-violet-600 to-purple-600"
-    }
+    } 
   ];
 
   return (
