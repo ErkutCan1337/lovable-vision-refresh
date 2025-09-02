@@ -24,6 +24,10 @@ import BusinessIntelligence from "./pages/products/BusinessIntelligence";
 import BigData from "./pages/products/BigData";
 import PassengerInfo from "./pages/products/PassengerInfo";
 import Compliance from "./pages/products/Compliance";
+import GisSolutions from "./pages/products/GisSolutions";
+import ScreenManagement from "./pages/products/ScreenManagement";
+import ProcessManagement from "./pages/products/ProcessManagement";
+import Cybersecurity from "./pages/products/Cybersecurity";
 
 const queryClient = new QueryClient();
 
@@ -54,6 +58,10 @@ const App = () => (
         <Route path="/products/big-data" element={<BigData />} />
         <Route path="/products/passenger-info" element={<PassengerInfo />} />
         <Route path="/products/compliance" element={<Compliance />} />
+        <Route path="/products/gis-solutions" element={<GisSolutions />} />
+        <Route path="/products/screen-management" element={<ScreenManagement />} />
+        <Route path="/products/process-management" element={<ProcessManagement />} />
+        <Route path="/products/cybersecurity" element={<Cybersecurity />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
