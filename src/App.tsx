@@ -28,7 +28,6 @@ import GisSolutions from "./pages/products/GisSolutions";
 import ScreenManagement from "./pages/products/ScreenManagement";
 import ProcessManagement from "./pages/products/ProcessManagement";
 import Cybersecurity from "./pages/products/Cybersecurity";
-import Procurement from "./pages/products/Procurement";
 
 const queryClient = new QueryClient();
 
@@ -63,7 +62,6 @@ const App = () => (
         <Route path="/products/screen-management" element={<ScreenManagement />} />
         <Route path="/products/process-management" element={<ProcessManagement />} />
         <Route path="/products/cybersecurity" element={<Cybersecurity />} />
-        <Route path="/products/procurement" element={<Procurement />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
