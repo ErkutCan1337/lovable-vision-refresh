@@ -1,192 +1,257 @@
+import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { useLanguage } from "@/contexts/LanguageContext";
-import { ArrowRight, Package, TrendingUp, Shield, CheckCircle } from "lucide-react";
-import { Link } from "react-router-dom";
+import { 
+  Package, 
+  BarChart3, 
+  Shield, 
+  Clock,
+  FileText,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Database,
+  Settings,
+  DollarSign
+} from "lucide-react";
 import procurementHero from "@/assets/procurement-hero.jpg";
 
-const Procurement = () => {
+export default function Procurement() {
   const { t } = useLanguage();
 
   const features = [
     {
       icon: Package,
-      title: "Asset Lifecycle Management",
-      description: "Complete tracking and management of assets from procurement to disposal"
+      title: t("procurement.features.inventory.title"),
+      description: t("procurement.features.inventory.desc")
     },
     {
-      icon: TrendingUp,
-      title: "Cost Optimization",
-      description: "Advanced analytics and reporting for better procurement decisions"
+      icon: FileText,
+      title: t("procurement.features.purchase.title"),
+      description: t("procurement.features.purchase.desc")
+    },
+    {
+      icon: Users,
+      title: t("procurement.features.vendor.title"),
+      description: t("procurement.features.vendor.desc")
+    },
+    {
+      icon: BarChart3,
+      title: t("procurement.features.analytics.title"),
+      description: t("procurement.features.analytics.desc")
     },
     {
       icon: Shield,
-      title: "Compliance Tracking",
-      description: "Ensure compliance with procurement policies and regulations"
+      title: t("procurement.features.compliance.title"),
+      description: t("procurement.features.compliance.desc")
+    },
+    {
+      icon: Clock,
+      title: t("procurement.features.lifecycle.title"),
+      description: t("procurement.features.lifecycle.desc")
     }
   ];
 
   const benefits = [
-    "Streamlined procurement processes",
-    "Real-time asset tracking and monitoring",
-    "Automated purchase order management",
-    "Vendor performance analytics",
-    "Budget control and forecasting",
-    "Integration with existing ERP systems",
-    "Mobile access for field teams",
-    "Comprehensive audit trails"
-  ];
-
-  const modules = [
     {
-      title: "Purchase Management",
-      description: "Automate requisitions, approvals, and purchase orders",
-      features: ["Electronic requisitions", "Multi-level approvals", "PO generation", "Budget validation"]
+      icon: DollarSign,
+      title: t("procurement.benefits.cost.title"),
+      description: t("procurement.benefits.cost.desc")
     },
     {
-      title: "Vendor Management",
-      description: "Manage vendor relationships and performance",
-      features: ["Vendor database", "Performance tracking", "Contract management", "RFQ/RFP tools"]
+      icon: TrendingUp,
+      title: t("procurement.benefits.efficiency.title"),
+      description: t("procurement.benefits.efficiency.desc")
     },
     {
-      title: "Asset Tracking",
-      description: "Complete visibility of all organizational assets",
-      features: ["Barcode/RFID tracking", "Maintenance scheduling", "Depreciation tracking", "Location management"]
+      icon: Database,
+      title: t("procurement.benefits.visibility.title"),
+      description: t("procurement.benefits.visibility.desc")
     },
     {
-      title: "Inventory Control",
-      description: "Optimize inventory levels and reduce costs",
-      features: ["Stock level monitoring", "Reorder automation", "Warehouse management", "ABC analysis"]
+      icon: Settings,
+      title: t("procurement.benefits.automation.title"),
+      description: t("procurement.benefits.automation.desc")
     }
   ];
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      {/* SEO Meta Tags */}
+      <title>Procurement and Asset Management Solutions | Enterprise Resource Planning</title>
+      <meta name="description" content="Streamline procurement processes and optimize asset management with our comprehensive ERP solution. Real-time tracking, vendor management, and spend analytics." />
+      <meta name="keywords" content="procurement management, asset management, ERP, inventory tracking, vendor management, purchase orders, spend analytics" />
       
+      <Header />
+
       {/* Hero Section */}
-      <section className="relative h-[60vh] min-h-[500px] overflow-hidden">
-        <div className="absolute inset-0">
-          <img 
-            src={procurementHero} 
-            alt="Procurement and Asset Management" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/50" />
+      <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${procurementHero})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-background/95 to-background/70" />
         </div>
-        <div className="relative h-full flex items-center">
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="max-w-2xl">
-              <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl fade-in">
-                {t("products.procurement.title")}
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-muted-foreground fade-in" style={{animationDelay: "0.1s"}}>
-                {t("products.procurement.description")}
-              </p>
-              <div className="mt-10 flex items-center gap-x-6 fade-in" style={{animationDelay: "0.2s"}}>
-                <Button size="lg" asChild>
-                  <Link to="/contact">
-                    Get Started
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link to="/services">
-                    Learn More
-                  </Link>
-                </Button>
-              </div>
+        
+        <div className="container relative z-10 px-4">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
+              {t("procurement.hero.title")}
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-muted-foreground">
+              {t("procurement.hero.subtitle")}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="group" asChild>
+                <Link to="/contact">
+                  {t("procurement.hero.cta")}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link to="/services">
+                  {t("procurement.hero.explore")}
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
       </section>
-      
-      <section className="py-24 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
-              Complete Procurement & Asset Management Solution
+
+      {/* Overview Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+              {t("procurement.overview.title")}
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Streamline your procurement processes and gain complete visibility over your assets with our comprehensive management platform
+            <p className="text-lg text-muted-foreground mb-8">
+              {t("procurement.overview.desc")}
             </p>
           </div>
-          
-          <div className="grid gap-8 md:grid-cols-3 mb-16">
-            {features.map((feature, index) => {
-              const Icon = feature.icon;
-              return (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
-                      <Icon className="h-6 w-6 text-primary" />
-                    </div>
-                    <CardTitle>{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription>{feature.description}</CardDescription>
-                  </CardContent>
-                </Card>
-              );
-            })}
+        </div>
+      </section>
+
+      {/* Features Grid */}
+      <section className="py-20">
+        <div className="container px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              {t("procurement.features.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              {t("procurement.features.subtitle")}
+            </p>
           </div>
 
-          <div className="bg-accent/50 rounded-lg p-8 mb-16">
-            <h3 className="text-2xl font-semibold mb-6">Key Benefits</h3>
-            <div className="grid gap-3 md:grid-cols-2">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                  <span>{benefit}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="mb-16">
-            <h3 className="text-2xl font-semibold mb-8 text-center">Comprehensive Modules</h3>
-            <div className="grid gap-6 md:grid-cols-2">
-              {modules.map((module, index) => (
-                <Card key={index}>
-                  <CardHeader>
-                    <CardTitle>{module.title}</CardTitle>
-                    <CardDescription>{module.description}</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-2">
-                      {module.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center space-x-2">
-                          <div className="w-1.5 h-1.5 rounded-full bg-primary" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
-          <div className="text-center">
-            <Button 
-              size="lg" 
-              asChild
-              className="group"
-            >
-              <Link to="/contact">
-                Request a Demo
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Link>
-            </Button>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {features.map((feature, index) => (
+              <Card key={index} className="p-6 hover:shadow-lg transition-shadow">
+                <feature.icon className="h-12 w-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2 text-foreground">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
-      
+
+      {/* Benefits Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              {t("procurement.benefits.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              {t("procurement.benefits.subtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <benefit.icon className="h-6 w-6 text-primary" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-2 text-foreground">{benefit.title}</h3>
+                  <p className="text-muted-foreground">{benefit.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Flow Section */}
+      <section className="py-20">
+        <div className="container px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
+              {t("procurement.process.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              {t("procurement.process.subtitle")}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {[
+              { step: "1", title: t("procurement.process.step1"), desc: t("procurement.process.step1.desc") },
+              { step: "2", title: t("procurement.process.step2"), desc: t("procurement.process.step2.desc") },
+              { step: "3", title: t("procurement.process.step3"), desc: t("procurement.process.step3.desc") },
+              { step: "4", title: t("procurement.process.step4"), desc: t("procurement.process.step4.desc") }
+            ].map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+                  {item.step}
+                </div>
+                <h3 className="text-lg font-semibold mb-2 text-foreground">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-primary text-primary-foreground">
+        <div className="container px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              {t("procurement.cta.title")}
+            </h2>
+            <p className="text-xl mb-8 opacity-90">
+              {t("procurement.cta.subtitle")}
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary" asChild>
+                <Link to="/contact">
+                  {t("procurement.cta.demo")}
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground/10" asChild>
+                <Link to="/services">
+                  {t("procurement.cta.learn")}
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );
-};
-
-export default Procurement;
+}
