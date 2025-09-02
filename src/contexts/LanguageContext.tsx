@@ -760,6 +760,71 @@ const translations = {
     'home.stats.team.description': 'Our strong team of experienced technicians and engineers',
     'home.stats.facility.title': 'Modern Facility',
     'home.stats.facility.description': 'We serve from our Ankara-based technology hub',
+    
+    // Procurement Page
+    'procurement.hero.title': 'Procurement and Asset Management',
+    'procurement.hero.subtitle': 'Streamline your procurement processes and optimize asset lifecycle management',
+    'procurement.hero.cta': 'Get Started',
+    'procurement.hero.explore': 'Explore Solutions',
+    
+    'procurement.overview.title': 'Complete Procurement Management Solution',
+    'procurement.overview.desc': 'Transform your procurement operations with our comprehensive platform that covers everything from requisition to payment, ensuring compliance, cost savings, and operational efficiency.',
+    
+    'procurement.features.title': 'Key Features',
+    'procurement.features.subtitle': 'Our procurement solution offers powerful tools to manage every aspect of your purchasing and asset management needs.',
+    
+    'procurement.features.inventory.title': 'Inventory Management',
+    'procurement.features.inventory.desc': 'Real-time tracking of inventory levels, automated reordering, and warehouse management.',
+    
+    'procurement.features.purchase.title': 'Purchase Orders',
+    'procurement.features.purchase.desc': 'Streamlined purchase order creation, approval workflows, and vendor communication.',
+    
+    'procurement.features.vendor.title': 'Vendor Management',
+    'procurement.features.vendor.desc': 'Centralized vendor database, performance tracking, and contract management.',
+    
+    'procurement.features.analytics.title': 'Spend Analytics',
+    'procurement.features.analytics.desc': 'Comprehensive reporting and insights to optimize spending and identify savings opportunities.',
+    
+    'procurement.features.compliance.title': 'Compliance Tracking',
+    'procurement.features.compliance.desc': 'Ensure regulatory compliance with audit trails and automated documentation.',
+    
+    'procurement.features.lifecycle.title': 'Asset Lifecycle',
+    'procurement.features.lifecycle.desc': 'Track assets from acquisition through disposal with maintenance scheduling.',
+    
+    'procurement.benefits.title': 'Business Benefits',
+    'procurement.benefits.subtitle': 'Drive efficiency and cost savings across your procurement operations.',
+    
+    'procurement.benefits.cost.title': 'Cost Reduction',
+    'procurement.benefits.cost.desc': 'Achieve significant savings through better vendor negotiations and spend visibility.',
+    
+    'procurement.benefits.efficiency.title': 'Improved Efficiency',
+    'procurement.benefits.efficiency.desc': 'Automate manual processes and reduce procurement cycle times by up to 50%.',
+    
+    'procurement.benefits.visibility.title': 'Complete Visibility',
+    'procurement.benefits.visibility.desc': 'Real-time dashboards provide full transparency into procurement activities.',
+    
+    'procurement.benefits.automation.title': 'Process Automation',
+    'procurement.benefits.automation.desc': 'Eliminate manual tasks with intelligent workflow automation.',
+    
+    'procurement.process.title': 'Procurement Process',
+    'procurement.process.subtitle': 'A streamlined workflow that ensures efficiency at every step.',
+    
+    'procurement.process.step1': 'Request',
+    'procurement.process.step1.desc': 'Initiate purchase requests with automated approval routing.',
+    
+    'procurement.process.step2': 'Approve',
+    'procurement.process.step2.desc': 'Multi-level approval workflows ensure compliance.',
+    
+    'procurement.process.step3': 'Order',
+    'procurement.process.step3.desc': 'Create and send purchase orders to vendors seamlessly.',
+    
+    'procurement.process.step4': 'Receive',
+    'procurement.process.step4.desc': 'Track deliveries and manage inventory updates.',
+    
+    'procurement.cta.title': 'Ready to Transform Your Procurement?',
+    'procurement.cta.subtitle': 'Let us show you how our solution can streamline your operations.',
+    'procurement.cta.demo': 'Schedule a Demo',
+    'procurement.cta.learn': 'Learn More',
   }
 };
 
