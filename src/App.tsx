@@ -22,6 +22,8 @@ import DigitalArchiving from "./pages/products/DigitalArchiving";
 import WebMobile from "./pages/products/WebMobile";
 import BusinessIntelligence from "./pages/products/BusinessIntelligence";
 import BigData from "./pages/products/BigData";
+import PassengerInfo from "./pages/products/PassengerInfo";
+import Compliance from "./pages/products/Compliance";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +52,8 @@ const App = () => (
         <Route path="/products/web-mobile" element={<WebMobile />} />
         <Route path="/products/business-intelligence" element={<BusinessIntelligence />} />
         <Route path="/products/big-data" element={<BigData />} />
+        <Route path="/products/passenger-info" element={<PassengerInfo />} />
+        <Route path="/products/compliance" element={<Compliance />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
