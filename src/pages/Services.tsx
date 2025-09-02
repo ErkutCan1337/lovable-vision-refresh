@@ -63,7 +63,7 @@ const Services = () => {
       icon: Monitor,
       titleKey: "products.passenger_info.title",
       descriptionKey: "products.passenger_info.description",
-      path: "/products/passenger-information",
+      path: "/products/passenger-info",
       gradient: "from-indigo-500 to-indigo-600",
       category: "business"
     },
