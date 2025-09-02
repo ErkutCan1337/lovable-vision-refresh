@@ -226,22 +226,24 @@ export default function Procurement() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="container px-4">
+      <section className="py-20 bg-gradient-to-br from-muted/50 via-background to-muted/30 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-primary/10" />
+        <div className="container px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
               {t("procurement.cta.title")}
             </h2>
-            <p className="text-xl mb-8 opacity-90">
+            <p className="text-xl mb-8 text-muted-foreground">
               {t("procurement.cta.subtitle")}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
+              <Button size="lg" className="group" asChild>
                 <Link to="/contact">
                   {t("procurement.cta.demo")}
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent text-primary-foreground border-primary-foreground hover:bg-primary-foreground/10" asChild>
+              <Button size="lg" variant="outline" asChild>
                 <Link to="/services">
                   {t("procurement.cta.learn")}
                 </Link>
