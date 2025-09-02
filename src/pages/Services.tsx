@@ -157,20 +157,6 @@ const Services = () => {
       gradient: "from-orange-600 to-red-600"
     },
     {
-      icon: Cloud,
-      titleKey: "integration.private_cloud.title",
-      descriptionKey: "integration.private_cloud.description",
-      path: "/products/private-cloud",
-      gradient: "from-cyan-600 to-blue-600"
-    },
-    {
-      icon: Zap,
-      titleKey: "integration.system_automation.title",
-      descriptionKey: "integration.system_automation.description",
-      path: "/products/system-automation",
-      gradient: "from-yellow-600 to-amber-600"
-    },
-    {
       icon: Building2,
       titleKey: "integration.data_center.title",
       descriptionKey: "integration.data_center.description",
